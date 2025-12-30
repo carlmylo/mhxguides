@@ -9,9 +9,11 @@ sidebar:
 import { Steps } from '@astrojs/starlight/components';
 import rb3delwarn from '@assets/rb3/ps3customs/rb3delwarn.png';
 import nautilushomepack from '@assets/rb3/ps3customs/nautilushomepack.png';
+import findpack from '@assets/rb3/ps3customs/findpack.png';
 import findfolder from '@assets/rb3/ps3customs/findfolder.png';
 import nautiluspackdrag from '@assets/rb3/ps3customs/nautiluspackdrag.gif';
-import packdelfolder from '@assets/rb3/ps3customs/packdelfolder.png';
+import nautiluspacksel from '@assets/rb3/ps3customs/nautiluspacksel.png';
+import nautiluspackdone from '@assets/rb3/ps3customs/nautiluspackdone.png';
 import { Image } from 'astro:assets';
 
 Rock Band 3 can delete a song in-game. However, if a song is part of a pack, it'll delete that entire pack as well.  
@@ -21,20 +23,22 @@ The best way to remove a song from a pack is through Nautilus' `Quick Pack Edito
 
 <Steps>
 1. Open Nautilus and select `Quick Pack Editor`.
-    <Image src={nautilushomepack} alt="Nautilus' main screen. A cursor hovers over 'Quick Pack Editor'." />
+    > <Image src={nautilushomepack} alt="Nautilus' main screen. A cursor hovers over 'Quick Pack Editor'." />
 
-2. Open a file browser window and navigate to the pack folder that contains the song you want to remove and look for the `songs.dta` file.  
-It will usually be in `dev_hdd0\game\BLUS30463\USRDIR\[PACKNAME]\songs`.
-    <Image src={findfolder} alt="A file browser window with 'songs.dta' selected." />
+2. Open a file browser window and navigate to the pack's folder that contains the song you want to remove.  
+These are usually located in `dev_hdd0\game\BLUS30463\USRDIR\`.  
+    > <Image src={findpack} alt="A Windows Explorer window. It's showing the USRDIR of Rock Band 3, with various folders that are music packs." />
 
-3. Drag the `songs.dta` file into the `Quick Pack Editor`.  
+3. Look for the `songs.dta` file. It will be in the `songs` folder, like `USRDIR\[Pack Name]\songs`.  
+    > <Image src={findfolder} alt="A Windows Explorer window. It's showing a 'songs.dta' file within a pack's 'songs' folder." />
+
+4. Drag the `songs.dta` file into the `Quick Pack Editor`.  
+    > <Image src={nautiluspackdrag} alt="A `songs.dta` file being dragged into Nautilus' `Quick Pack Editor`." />
+
+5. Change `Quick Pack Editor` to `Edit DTA entries and pack contents`.  
 Select the songs you want to remove then click `Remove selected`.  
-When you're done, click `Save` to lock your changes in.  
+    > <Image src={nautiluspacksel} alt="'Quick Pack Editor' showing some songs selected. A highlight is over 'Edit DTA entries and pack contents' and the cursor is over 'Remove selected'." />
 
-    <Image src={nautiluspackdrag} alt="An animation of a 'songs.dta' file being dragged and dropped into Nautilus' Quick Pack Editor." />
-
-4. Even though the song is deleted from the `songs.dta` file, they will still take up space.  
-You have to delete the song's corresponding folder as well.
-
-    <Image src={packdelfolder} alt="A file browser window. Multiple songs are selected and the cursor hovers over a popup menu option that says 'Delete'." />
+6. When you're done, click `Save` to apply changes.  
+    > <Image src={nautiluspackdone} alt="'Quick Pack Editor' with a log that says that the new `songs.dta` was created. The cursor is over `Save`." />
 </Steps>

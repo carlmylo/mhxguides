@@ -1,0 +1,78 @@
+---
+title: Finding duplicate songs
+slug: "en/rb3/ps3customs/duplicates"
+description: "How to delete individual songs from a pack."
+tableOfContents: false
+sidebar:
+  order: 6
+---
+import { Steps } from '@astrojs/starlight/components';
+import rb3songcount from '@assets/rb3/ps3customs/rb3songcount.png';
+import nautilusfileindex from '@assets/rb3/ps3customs/nautilusfileindex.png';
+import nautilusfileindexaddfolder from '@assets/rb3/ps3customs/nautilusfileindexaddfolder.png';
+import nautilusfileindexbuild from '@assets/rb3/ps3customs/nautilusfileindexbuild.png';
+import addfolder from '@assets/rb3/ps3customs/addfolder.png';
+import nautilusfileindexyes from '@assets/rb3/ps3customs/nautilusfileindexyes.png';
+import nautilusfileindexselid from '@assets/rb3/ps3customs/nautilusfileindexselid.png';
+import nautilusfileindexlist from '@assets/rb3/ps3customs/nautilusfileindexlist.png';
+import nautilushomepack from '@assets/rb3/ps3customs/nautilushomepack.png';
+import findpack from '@assets/rb3/ps3customs/findpack.png';
+import findfolder from '@assets/rb3/ps3customs/findfolder.png';
+import nautiluspackdrag from '@assets/rb3/ps3customs/nautiluspackdrag.gif';
+import nautiluspacksel from '@assets/rb3/ps3customs/nautiluspacksel.png';
+import nautiluspackdone from '@assets/rb3/ps3customs/nautiluspackdone.png';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+Over time, you may end up with a few songs that don't show. This will mostly occur when installing multiple packs that share the same songs.   
+<Image src={rb3songcount} alt="Rock Band 3 warning the user that they're about to delete many songs from the library." />
+Rock Band 3 showing a song library that has 5 songs missing.
+
+You can use Nautilus to help solve this problem.
+
+<Aside>**Please note that this is not the same thing as [[songs not showing up due to ID problems]](../troubleshoot/#customs-not-showing-upworking-online--scores-not-saving).**</Aside>
+
+<Steps>
+1. Open Nautilus and select `File Indexer`.
+    > <Image src={nautilusfileindex} alt="Nautilus' main screen. A cursor hovers over 'File Indexer'." />
+
+2. Click on `Add New Folder`.
+    > <Image src={nautilusfileindexaddfolder} alt="File Indexer with a cursor over 'Add new folder'." />
+
+3. Go to where your Rock Band game data folders are.  
+This will be `dev_hdd0\game\BLUS30463\` for Rock Band 3 content and usually `dev_hdd0\game\BLUS30050\` for Rock Band 1/2 content.
+    > <Image src={addfolder} alt="A Windows Explorer window, with Rock Band 3's folder selected. Its name is 'BLUS30463'." />
+
+4. Enable `PS3 Mode (check for songs.dta files)` in the middle then click on `Build Index`.
+    > <Image src={nautilusfileindexbuild} alt="File Indexer with 'PS3 Mode (check for songs.dta files)' enabled and the cursor over 'Build Index'." />
+
+5. Click `Yes` on the warning. As it says, it may take a while to scan.
+    > <Image src={nautilusfileindexyes} alt="A warning that tells the user that the process of scan may take a while." />
+
+6. After it finishes scanning, click on `Tools` at the top, then enable `Find songs with ID conflicts`.
+    > <Image src={nautilusfileindexselid} alt="File Indexer with a 'Tools' dropdown menu activated. The cursor is hovering over 'Find songs with ID conflicts'." />
+
+7. The list at the bottom will now show you songs that have conflicts, usually caused by installing the same song.
+<Aside>You may have to increase the window size to see all of the information.</Aside>
+    > <Image src={nautilusfileindexlist} alt="A list of songs in File Indexer. Each song is duplicated twice and since they are included in two packs." />
+
+8. While leaving `File Indexer` open, go back to the start page of Nautilus and select `Quick Pack Editor`.
+    > <Image src={nautilushomepack} alt="Nautilus' main screen. A cursor hovers over 'Quick Pack Editor'." />
+
+9. Open a file browser window and navigate to the pack's folder that contains the duplicates you want to remove.  
+These are usually located in `dev_hdd0\game\BLUS30463\USRDIR\`.  
+    > <Image src={findpack} alt="A Windows Explorer window. It's showing the USRDIR of Rock Band 3, with various folders that are music packs." />
+
+10. Look for the `songs.dta` file. It will be in the `songs` folder, like `USRDIR\[Pack Name]\songs`.  
+    > <Image src={findfolder} alt="A Windows Explorer window. It's showing a 'songs.dta' file within a pack's 'songs' folder." />
+
+11. Drag the `songs.dta` file into the `Quick Pack Editor`.  
+    > <Image src={nautiluspackdrag} alt="A `songs.dta` file being dragged into Nautilus' `Quick Pack Editor`." />
+
+12. Change `Quick Pack Editor` to `Edit DTA entries and pack contents`.  
+Select the songs you want to remove then click `Remove selected`.  
+    > <Image src={nautiluspacksel} alt="'Quick Pack Editor' showing some songs selected. A highlight is over 'Edit DTA entries and pack contents' and the cursor is over 'Remove selected'." />
+
+13. When you're done, click `Save` to apply changes.  
+    > <Image src={nautiluspackdone} alt="'Quick Pack Editor' with a log that says that the new `songs.dta` was created. The cursor is over `Save`." />
+</Steps>

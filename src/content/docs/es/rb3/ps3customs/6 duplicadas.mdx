@@ -1,0 +1,78 @@
+---
+title: Eliminando canciones duplicadas
+slug: "es/rb3/ps3customs/duplicates"
+description: "Como eliminar canciones de un paquete."
+tableOfContents: false
+sidebar:
+  order: 5
+  group: "PS3Customs"
+---
+import { Steps } from '@astrojs/starlight/components';
+import rb3songcount from '@assets/rb3/ps3customs/rb3songcountes.png';
+import nautilusfileindex from '@assets/rb3/ps3customs/nautilusfileindex.png';
+import nautilusfileindexaddfolder from '@assets/rb3/ps3customs/nautilusfileindexaddfolder.png';
+import nautilusfileindexbuild from '@assets/rb3/ps3customs/nautilusfileindexbuild.png';
+import addfolder from '@assets/rb3/ps3customs/addfolder.png';
+import nautilusfileindexyes from '@assets/rb3/ps3customs/nautilusfileindexyes.png';
+import nautilusfileindexselid from '@assets/rb3/ps3customs/nautilusfileindexselid.png';
+import nautilusfileindexlist from '@assets/rb3/ps3customs/nautilusfileindexlist.png';
+import nautilushomepack from '@assets/rb3/ps3customs/nautilushomepack.png';
+import findpack from '@assets/rb3/ps3customs/findpack.png';
+import findfolder from '@assets/rb3/ps3customs/findfolder.png';
+import nautiluspackdrag from '@assets/rb3/ps3customs/nautiluspackdrag.gif';
+import nautiluspacksel from '@assets/rb3/ps3customs/nautiluspacksel.png';
+import nautiluspackdone from '@assets/rb3/ps3customs/nautiluspackdone.png';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+Con tiempo, puede que ciertas canciones no salgan en tu colección de música. Esto usualmente puede pasar cuando instales varios paquetes con canciones duplicadas.
+<Image src={rb3songcount} alt="Rock Band 3 mostrando una colección de música que le falta 5 canciones." />
+
+Puedes usar Nautilus para resolver este problema.
+
+<Aside>**Por favor nota que esto no es lo mismo que [[canciones que no salen porque tienen problemas de IDs]](../troubleshoot/#canciones-no-están-en-mi-colección-no-salen-en-línea--puntajes-no-se-guardan).**</Aside>
+
+<Steps>
+1. Abre Nautilus y elije <span title="Indexador de datos">"<code>File Indexer</code>"</span>.
+    > <Image src={nautilusfileindex} alt="Nautilus' main screen. A cursor hovers over 'Quick Pack Editor'." />
+
+2. Haz click en <span title="Agregar nueva carpeta">"<code>Add New Folder</code>"</span>.
+    > <Image src={nautilusfileindexaddfolder} alt="Dentro de File Indexer. El cursor esta sobre 'Add New Folder'." />
+
+3. Ve a la carpeta donde están los datos (DLC) de Rock Band.  
+Esto es `dev_hdd0\game\BLUS30463\` para contenido de Rock Band 3 y usualmente `dev_hdd0\game\BLUS30050\` para contenido de Rock Band 1/2.
+    > <Image src={addfolder} alt="Un explorador de Windows. Esta elegida una carpeta de Rock Band 3 que se llama 'BLUS30463'." />
+
+4. Activa <span title="Modo de PS3 (revisa por archivos de songs.dta)">"<code>PS3 Mode (check for songs.dta files)</code>"</span> en el medio y luego haz click en <span title="Crear índice">"<code>Build Index</code>"</span>.
+    > <Image src={nautilusfileindexbuild} alt="Dentro de File Indexer con 'PS3 Mode (check for songs.dta files)' activo y el cursor sobre 'Build Index'." />
+
+5. Haz click en <span title="Si">"<code>Yes</code>"</span> en la advertencia. Simplemente dice que puede tardar un rato, depende del tamaño de tu colección de música.
+    > <Image src={nautilusfileindexyes} alt="Una advertencia que dice que puede tardar un rato. El cursor esta sobre 'Yes'." />
+
+6. Cuando termine de escanear, entra a <span title="Herramientas">"<code>Tools</code>"</span> arriba y activa <span title="Buscar canciones con conflictos de ID">"<code>Find songs with ID conflicts</code>"</span>.
+    > <Image src={nautilusfileindexselid} alt="Dentro de 'File Indexer' dentro del menu de 'Tools'. El cursor esta sobre 'Find songs with ID conflicts'." />
+
+7. Tendrás una lista abajo que mostrara canciones duplicadas. Usualmente esto pasa por instalar varios paquetes con canciones duplicadas.
+<Aside>Puede que tengas que ajustar el tamaño de la pantalla para ver toda la información.</Aside>
+    > <Image src={nautilusfileindexlist} alt="Una lista de canciones en 'File Indexer'. Cada canción tiene una copia duplicada abajo porque la canción esta en dos paquetes." />
+
+8. Abre Nautilus y elije <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.
+    > <Image src={nautilushomepack} alt="La pantalla principal de Nautilus. El cursor esta sobre 'Quick Pack Editor'." />
+
+9. Abre un explorador de archivos y entra a la carpeta del paquete que tiene las canciones que quieras eliminar.  
+Esto usualmente esta dentro de `dev_hdd0\game\BLUS30463\USRDIR\`  
+    > <Image src={findpack} alt="Un explorador de Windows. Esta mostrando la carpeta de USRDIR de Rock Band 3. Esto contiene todos los paquetes de Rock Band 3." />
+
+10. Encuentra el archivo `songs.dta`. Estará dentro de la carpeta de `songs`, como `USRDIR\[Nombre de paquete]\songs`.  
+    > <Image src={findfolder} alt="Un explorador de Windows. Esta resaltado un archivo de `songs.dta` dentro de la carpeta de `songs` en un paquete." />
+
+11. Arrastra y suelta el archivo `songs.dta` dentro de la carpeta en la pantalla de <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.  
+    > <Image src={nautiluspackdrag} alt="Un archivo de `songs.dta` siendo arrastrado al 'Quick Pack Editor' de Nautilus." />
+
+12. Cambia el modo de  <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span> a <span title="Editar entradas de DTA y contenido del paquete">"<code>Edit DTA entries and pack contents</code>"</span>.  
+Elige las canciones que quieres borrar y haz click en <span title="Eliminar elegidas">"<code>Remove selected</code>"</span>.  
+    > <Image src={nautiluspacksel} alt="'Quick Pack Editor' esta mostrando canciones elegidas y resaltadas. Se resalta 'Edit DTA entries and pack contents' y el cursor esta sobre 'Remove selected'." />
+
+13. Cuando termines, haz click en <span title="Guardar">"<code>Save</code>"</span> para guardar tus cambios.  
+    > <Image src={nautiluspackdone} alt="El historial de 'Quick Pack Editor' diciendo que un archivo de `songs.dta` nuevo fue creado." />
+</Steps>
