@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'guides.milohax.org',
+  site: 'https://guides.milohax.org/',
   base: '/',
   integrations: [
     starlight({
