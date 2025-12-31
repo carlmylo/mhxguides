@@ -36,7 +36,7 @@ import midictrlmidioxcombo from '@assets/rb3/rpcs3/instruments/setup/midi/midict
 import midictrlrpcs3 from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlrpcs3.png';
 import { Image } from 'astro:assets';
 
-<center><img src="/guides/assets/instruments/logos/midi.png" alt="Sistema" title="Sistema"></img></center>
+<center><img src="/assets/instruments/logos/midi.png" alt="Sistema" title="Sistema"></img></center>
 <center><Image src={midikeyscontroller} alt="Control" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
@@ -75,7 +75,7 @@ Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en `Cam
 Ahora, ve a la pestaña de `E/S`.  
 <Image src={iok} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos." />  
 
-* ![Un cuadro bronceado con un contorno solido.](/guides/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
+* ![Un cuadro bronceado con un contorno solido.](/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
     * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige tu teclado o interfaz MIDI en el menú desplegable junto a él.**
 
 ### Mapeo
@@ -85,17 +85,17 @@ Utiliza la siguiente imagen como referencia. Recomendamos poner etiquetas o algo
 
 | **Numero de nota MIDI** | **Nota** | **Nota (Yamaha)** | **Botón** |
 |:-------:|:--------:|:-----------------:|:----------:|
-| #36 | C2 | C1 | ![Botón Select](/guides/assets/instruments/buttons/ps3/sel.png "Botón Select") |
-| #38 | D2 | D1 | ![D-Pad (Cruceta) Izquierda](/guides/assets/instruments/buttons/ps3/dl.png "D-Pad (Cruceta) Izquierda") |
-| #40 | E2 | E1 | ![D-Pad (Cruceta) Derecha](/guides/assets/instruments/buttons/ps3/dr.png "D-Pad (Cruceta) Derecha") |
-| #41 | F2 | F1 | ![D-Pad (Cruceta) Arriba](/guides/assets/instruments/buttons/ps3/du.png "D-Pad (Cruceta) Arriba") |
-| #43 | G2 | G1 | ![D-Pad (Cruceta) Abajo](/guides/assets/instruments/buttons/ps3/dd.png "D-Pad (Cruceta) Abajo") |
+| #36 | C2 | C1 | ![Botón Select](/assets/instruments/buttons/ps3/sel.png "Botón Select") |
+| #38 | D2 | D1 | ![D-Pad (Cruceta) Izquierda](/assets/instruments/buttons/ps3/dl.png "D-Pad (Cruceta) Izquierda") |
+| #40 | E2 | E1 | ![D-Pad (Cruceta) Derecha](/assets/instruments/buttons/ps3/dr.png "D-Pad (Cruceta) Derecha") |
+| #41 | F2 | F1 | ![D-Pad (Cruceta) Arriba](/assets/instruments/buttons/ps3/du.png "D-Pad (Cruceta) Arriba") |
+| #43 | G2 | G1 | ![D-Pad (Cruceta) Abajo](/assets/instruments/buttons/ps3/dd.png "D-Pad (Cruceta) Abajo") |
 | #45 | A2 | A1 | Sobrecarga |
-| #37 | C#2 | C#1 | ![Botón Triangle (Triangulo)](/guides/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
-| #39 | D#2 | D#1 | ![Botón Square (Cuadro)](/guides/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
-| #42 | F#2 | F#1 | ![Botón Circle (Circulo)](/guides/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
-| #44 | G#2 | G#1 | ![Botón Cross (Cruz)](/guides/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
-| #46 | A#2 | A#1 | ![Botón Start](/guides/assets/instruments/buttons/ps3/sta.png "Botón Start") |
+| #37 | C#2 | C#1 | ![Botón Triangle (Triangulo)](/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
+| #39 | D#2 | D#1 | ![Botón Square (Cuadro)](/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
+| #42 | F#2 | F#1 | ![Botón Circle (Circulo)](/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
+| #44 | G#2 | G#1 | ![Botón Cross (Cruz)](/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
+| #46 | A#2 | A#1 | ![Botón Start](/assets/instruments/buttons/ps3/sta.png "Botón Start") |
 | Perilla de Pitch | Perilla de Pitch | Perilla de Pitch | Franja táctil |
 | CC#1 | Perilla de modulación | Perilla de modulación | Sobrecarga |
 | CC#64 | Pedal de resonancia | Pedal de resonancia | Sobrecarga |
@@ -132,7 +132,7 @@ Ve a donde extrajiste el archivo `.zip` y abre la aplicación de freepiano.
 > <Image src={midictrlfreepnodir} alt="Una captura con la aplicación de freepiano resaltada." />
 
 Puedes configurar las teclas a tu gusto usando la sección de [**[#Mapeo]**](#mapeo) hacia arriba.  
-También existe un perfil pre-hecho que puedes [**[descargar aquí]**](/../../guides/downloads/rb3/rpcs3/instrument-repo/rb3gamekeys.map). 
+También existe un perfil pre-hecho que puedes [**[descargar aquí]**](/../../downloads/rb3/rpcs3/instrument-repo/rb3gamekeys.map). 
 
 Para usar el perfil, coloca el archivo `rb3gamekeys.map` en la carpeta llamada `keymap` donde esta la aplicación de freepiano.  
 > <Image src={midictrlfreepnopreset} alt="Un perfil llamado rb3gamekeys.map resaltado, dentro de la carpeta llamada 'keymap'." />
@@ -144,16 +144,16 @@ También, si existe creaste tu propio perfil o editaste el perfil pre-hecho, pue
 El perfil pre-hecho esta configurado así:
 | **Tecla** | **Acción** |
 |:---:|:---:|
-| `Enter` | ![Botón Start](/guides/assets/instruments/buttons/ps3/sta.png "Botón Start") |
-| `Shift (Mayús) Izq.` | ![Botón Select](/guides/assets/instruments/buttons/ps3/sel.png "Botón Select") |
-| `Arriba` | ![D-Pad (Cruceta) Arriba](/guides/assets/instruments/buttons/ps3/du.png "D-Pad (Cruceta) Arriba") |
-| `Abajo` | ![D-Pad (Cruceta) Abajo](/guides/assets/instruments/buttons/ps3/dd.png "D-Pad (Cruceta) Abajo") |
-| `Izquierda` | ![D-Pad (Cruceta) Izquierda](/guides/assets/instruments/buttons/ps3/dl.png "D-Pad (Cruceta) Izquierda") |
-| `Derecha` | ![D-Pad (Cruceta) Derecha](/guides/assets/instruments/buttons/ps3/dr.png "D-Pad (Cruceta) Derecha") |
-| `A` | ![Botón Cross (Cruz)](/guides/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
-| `S` | ![Botón Circle (Circulo)](/guides/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
-| `D` | ![Botón Square (Cuadro)](/guides/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
-| `F` | ![Botón Triangle (Triangulo)](/guides/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
+| `Enter` | ![Botón Start](/assets/instruments/buttons/ps3/sta.png "Botón Start") |
+| `Shift (Mayús) Izq.` | ![Botón Select](/assets/instruments/buttons/ps3/sel.png "Botón Select") |
+| `Arriba` | ![D-Pad (Cruceta) Arriba](/assets/instruments/buttons/ps3/du.png "D-Pad (Cruceta) Arriba") |
+| `Abajo` | ![D-Pad (Cruceta) Abajo](/assets/instruments/buttons/ps3/dd.png "D-Pad (Cruceta) Abajo") |
+| `Izquierda` | ![D-Pad (Cruceta) Izquierda](/assets/instruments/buttons/ps3/dl.png "D-Pad (Cruceta) Izquierda") |
+| `Derecha` | ![D-Pad (Cruceta) Derecha](/assets/instruments/buttons/ps3/dr.png "D-Pad (Cruceta) Derecha") |
+| `A` | ![Botón Cross (Cruz)](/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
+| `S` | ![Botón Circle (Circulo)](/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
+| `D` | ![Botón Square (Cuadro)](/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
+| `F` | ![Botón Triangle (Triangulo)](/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
 
 Cuando termines de mapear, haz click en <span title="Instrumento">"<code>Instrument</code>"</span> en la parte de arriba de la pantalla FreePiano y selecciona la salida MIDI "Gamepad" que creaste con loopMIDI anteriormente.  
 > <Image src={midictrlfreepnoout} alt="El menú despegable de Instrumento dentro de Freepiano, con 'Gamepad MIDI' seleccionado." />
@@ -177,7 +177,7 @@ Elige el otro puerto que creaste en loopMIDI ("Pro Keys") en la sección de <spa
 Finalmente, en RPCS3, ve a la configuración personalizada de Rock Band 3 y entra a la pestaña de `E/S`.  
 > <Image src={midictrlrpcs3} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
 
-* ![Un cuadro bronceado con un contorno solido.](/guides/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
+* ![Un cuadro bronceado con un contorno solido.](/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
     * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige el puerto que seleccionaste como la salida en MIDI-OX ("Pro Keys")**
 
 Eso es todo. Recuerda que tienes que cerrar los **tres programas distintos** cuando no los estés usando, porque pueden causar problemas con los atajos de Windows.  
