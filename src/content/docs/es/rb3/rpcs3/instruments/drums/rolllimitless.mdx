@@ -15,6 +15,7 @@ import { Steps } from '@astrojs/starlight/components';
 import rolllimitlesscontroller from '@assets/rb3/rpcs3/instruments/controller/rolllimitlesscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomapes.png';
 import fwbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/fwbutton.png';
+import download from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/download.png';
 import startbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/startbutton.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
 import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
@@ -48,42 +49,47 @@ import { Image } from 'astro:assets';
 	Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
 ## Configuración
 <Steps>
-1. Pon el adaptador Roll Limitless en modo de actualizar firmware. Necesitas presionar y sostener el botón rectangular que esta mas cercas al puerto de micro USB arriba del adaptador.  
+1. Ve al sitio de Roll Limitless y descarga la firmware actual para baterías de Rock Band.  
+Necesitas expandir la categoría de <span title="Batería">"<code>Drums</code>"</span> y luego de <span title="Baterías de Rock Band">"<code>Rock Band Drums</code>"</span> y finalmente hacer click en <span title="Descarga">"<code>Download</code>"</span>.  
+    <Image src={download} alt="El sitio de Roll Limitless con las categorías de 'Drums' y luego 'Rock Band Drums' expandidas. El cursor esta sobre 'Download'." />
+
+
+2. Pon el adaptador Roll Limitless en modo de actualizar firmware. Necesitas presionar y sostener el botón rectangular que esta mas cercas al puerto de micro USB arriba del adaptador.  
     <Image src={fwbutton} alt="Un Roll Limitless con el botón de firmware circulado en rojo." />
 
-2. Sigue sosteniendo el botón mientras conectas el adaptador a tu computadora. Si lo hiciste bien, sera detectado como un disco extraíble. 
-
-3. <a href="https://https://rolllimitless.com/september-15th-2024-firmwares/#PS3::~:text=PS3%3A,work" target="_blank" rel="noopener noreferrer">[Descarga la firmware para "PS3" del sitio de Roll Limitless]</a>.
+3. Sigue sosteniendo el botón mientras conectas el adaptador a tu computadora. Si lo hiciste bien, sera detectado como un disco extraíble. 
 
 4. Coloca el archivo de firmware en el adaptador mientras esta en modo de actualizar (se mira como un disco extraíble.) Cuando termine de transferir, quita el adaptador de la computadora **seguramente**.
 
 5. Conecta el adaptador de vuelta a la computadora pero, esta vez, presiona y sostén el botón de inicio redondo que esta mas cercas al puerto de USB A.
     <Image src={startbutton} alt="Un Roll Limitless con el botón de Start circulado en rojo." />
 
-6. Ahora, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[ve al sitio de Zadig]</a>** y **descarga la versión mas actual**.
+6. 
 
-7. Haz click en <span title="Opciones">"<code>Options</code>"</span> y luego en <span title="Listar todos los dispositivos">"<code>List All Devices</code>"</span>.  
+7. Ahora, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[ve al sitio de Zadig]</a>** y **descarga la versión mas actual**.
+
+8. Haz click en <span title="Opciones">"<code>Options</code>"</span> y luego en <span title="Listar todos los dispositivos">"<code>List All Devices</code>"</span>.  
     <Image src={zadiglistall} alt="Zadig mostrando 'List All Devices' resaltado bajo 'Options'." />
 
-8. Deberías ver una lista de dispositivos ahora. **Elige el Roll Limitless**.  
+9. Deberías ver una lista de dispositivos ahora. **Elige el Roll Limitless**.  
 En este ejemplo, sale la Guitarra Mustang Pro (`Harmonix RB3 Mustang Guitar for PlayStation 3®`).  
     <Image src={zadigsel} alt="Zadig mostrando 'Harmonix RB3 Mustang Guitar for PlayStation® 3' resaltado en la lista de dispositivos." />
 
-9. **Después de seleccionar el dispositivo correcto, deberías ver la opción para reemplazar el controlador.  
+10. **Después de seleccionar el dispositivo correcto, deberías ver la opción para reemplazar el controlador.  
 _¡ASEGÚRATE DE QUE SOLO ESTÁS REEMPLAZANDO EL CONTROLADOR DEL INSTRUMENTO PRO DE ROCK BAND 3!_**  
 Haz click en <span title="Reemplazar controlador">"<code>Replace Driver</code>"</span>.  
     <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
-10. Va a parecer una advertencia. **Otra vez, asegúrate que solo estés eligiendo tu Roll Limitless.** Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
+11. Va a parecer una advertencia. **Otra vez, asegúrate que solo estés eligiendo tu Roll Limitless.** Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
     <Image src={zadigwarning} alt="Zadig advirtiendo al usuario que está a punto de modificar un controlador del sistema, con 'Yes' resaltado." />
 
-11. Se instalará el controlador. Como dice el programa, esto puede llevar algunos minutos.  
+12. Se instalará el controlador. Como dice el programa, esto puede llevar algunos minutos.  
     <Image src={zadigprogress} alt="Zadig en medio de una instalando un controlador." />
 
-12. Si todo sale bien, verás este mensaje:  
+13. Si todo sale bien, verás este mensaje:  
     <Image src={zadigdone} alt="Zadig indicando que el controlador se instaló correctamente, con 'Close' resaltado." />
 
-13. **Cierra Zadig** y, con el Roll Limitless todavía conectado, **abre RPCS3** y **abre Rock Band 3**.
+14. **Cierra Zadig** y, con el Roll Limitless todavía conectado, **abre RPCS3** y **abre Rock Band 3**.
 Enciende tu controlador y deberías ver que automáticamente se le asigna un número de jugador.  
     <Image src={protaron} alt="Una Mustand con el LED del segundo jugador activado" />
 </Steps>
@@ -194,4 +200,6 @@ La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración ad
 
 [[Regresar a la lista de instrumentos]](../../main/)
 
-Mapeado por Uzny
+
+Mapeado por <a href="https://gonakillya.neocities.org/" target="_blank" rel="noopener noreferrer">[gona]</a> y <a href="https://www.youtube.com/@teamOceanman343/videos" target="_blank" rel="noopener noreferrer">[Kevin]</a>  
+Versión previa mapeada por Uzny
