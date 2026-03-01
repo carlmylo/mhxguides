@@ -1,0 +1,37 @@
+---
+title: "REAPER: Descargas"
+slug: "es/charting/reaper/downloads"
+description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 2
+  label: Descargas
+---
+import webreaper from '@assets/charting/reaper/webreaper-win.png';
+import websws from '@assets/charting/reaper/websws-win.png';
+import webpython from '@assets/charting/reaper/webpython-win.png';
+import explorerdrag from '@assets/charting/reaper/explorerdrag-win.gif';
+import { Image } from 'astro:assets';
+import { Steps } from '@astrojs/starlight/components';
+
+## Instalando REAPER
+<Steps>
+1. <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer">[Descarga la versión actual de 64-bits de REAPER.]</a>.
+    * **¡Por favor NO actives la opción de `Portable install` en el instalador!**  
+    > <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer"><Image src={webreaper} alt="La pagina para descargar REAPER, mostrando el botón de descarga para Windows. El cursor esta sobre el boton verde de descarga." /></a>
+
+2. <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer">[Descarga la versión actual de 64-bits de SWS / S&M Extension.]</a>.
+    * **¡Por favor deja la opción de `Python ReaScript support` activada cuando lo instales!**  
+    > <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer"><Image src={websws} alt="La pagina para descargar la extension SWS/S&M Extension para Windows. El cursor esta sobre el boton de 'Download x64' en la sección de Windows." /></a>
+
+3. <a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer">[Descarga la versión actual de Python 3 si no la tienes.]</a>.
+    * **¡No descargues `Python install manager`!**
+    * **Python 2 no es lo mismo y no va a funcionar**.
+    > <a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer"><Image src={webpython} alt="La pagina para descargar Python con el cursor sobre el botón de 'get the standalone installer for Python 3.14.2'." /></a>
+4. <a href="https://www.dropbox.com/scl/fi/d095opr4dforkodoyakkv/REAPER-Files-WIN.zip?rlkey=in0qshm2g4ng64w3angz8ehfq&st=vyiy4h7y&dl=1" target="_blank" rel="noopener noreferrer">[Haz click aquí para descargar los archivos para REAPER de una carpeta `.zip`.]</a>.
+    * a. Extrae el archivo `.zip` a un lugar conveniente.
+    * b. Arrastra la carpeta de `Common` al acceso directo que se llama de `DRAG 'COMMON' HERE`.
+    * c. Arrastra la carpeta de `REAPER` al acceso directo que se llama `DRAG 'REAPER' HERE`.  
+    * d. Reemplaza todos los archivos si te pregunta.
+    > <a href="https://www.dropbox.com/scl/fi/d095opr4dforkodoyakkv/REAPER-Files-WIN.zip?rlkey=in0qshm2g4ng64w3angz8ehfq&st=vyiy4h7y&dl=1" target="_blank" rel="noopener noreferrer"><Image src={explorerdrag} alt="Las carpetas siendo arrastrados a carpetas en formato de acceso directo." /></a>
+</Steps>

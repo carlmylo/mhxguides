@@ -1,0 +1,19 @@
+---
+title: "REAPER: Troubleshooting"
+slug: "en/charting/reaper/troubleshooting"
+description: "How to set up REAPER to chart for Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 5
+  label: Troubleshooting
+---
+import errorplugin from '@assets/charting/reaper/errorplugin-win.png';
+import errordevice from '@assets/charting/reaper/errordevice-win.png';
+import { Image } from 'astro:assets';
+
+* RBN Preview doesn't load!
+  * You're missing the appropriate Microsoft Visual C++ Redistributable Runtimes. <a href="https://kutt.it/vcpp" target="_blank" rel="noopener noreferrer">[Click here to download them]</a>.  
+  > <Image src={errorplugin} alt="REAPER showing a broken RBN Preview." />
+* I get "Error opening devices" when swapping to WASAPI!
+  * `Could not find input device`: You probably don't have a microphone connected Change the "Input channels" to `0` in the Device section of Preferences.  
+  > <Image src={errordevice} alt="REAPER showing an error that says 'There was an error opening the audio hardware. WASAPI Error: could not find input device'." />

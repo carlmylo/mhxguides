@@ -1,0 +1,60 @@
+---
+title: "REAPER: Updating"
+slug: "en/charting/reaper/updating"
+description: "How to set up REAPER to chart for Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 6
+  label: Updating
+---
+import explorerdrag from '@assets/charting/reaper/explorerdrag-win.gif';
+import { Image } from 'astro:assets';
+
+As these tools improve, there will be updates to plugins and scripts. While you can update by downloading everything again, you can also just update the plugins and scripts.  
+The process is just like the initial download except the `.zip` file has a slightly different name.
+
+<a href="https://www.dropbox.com/scl/fi/kofagfu0fp8ua5th9elmj/REAPER-Files-Update-WIN.zip?rlkey=450pm5976sxx094xvax0jcq4y&st=16jube72&dl=1" target="_blank" rel="noopener noreferrer">[Click here to download the REAPER Files Update `.zip` archive.]</a>.
+    * a. Extract the `.zip` archive somewhere convenient.
+    * b. Drag the `Common` folder into `DRAG 'Common' HERE` shortcut.
+    * c. Drag `REAPER` into the `DRAG 'REAPER' HERE` shortcut.  
+    * d. Replace any files if you're asked.
+    > <a href="https://www.dropbox.com/scl/fi/kofagfu0fp8ua5th9elmj/REAPER-Files-Update-WIN.zip?rlkey=450pm5976sxx094xvax0jcq4y&st=16jube72&dl=1" target="_blank" rel="noopener noreferrer"><Image src={explorerdrag} alt="Folders being dragged into shortcuts to other folders." /></a>
+
+## Changelog
+<details>
+<summary>2026-03-01T12:41:36+00:00 1772368691</summary>
+This is the first significant update to the template. The goal is to create more options to download. The full download and a download that strictly will update scripts and plugins without touching the template files. There will be a Linux version of these two in the future.
+#### Template
+* Removed random `[play]` event from Keys track. (Caught by Linos)
+* Enabled grid. (Caught by Linos)
+* Muted "pilot" notes. These notes are made so that the "Unused note rows" option focuses on Expert only when beginning a chart. They kept causing MAGMA errors when forgetting to remove them.
+* Expanded every track to measure 163, similar to RBN2 Template.
+* Assigned ALT+SHIFT+S to "Split Notes on Grid". (Suggested by AddyMills).
+* Made sure that ReaSynth instances were the ones from the RBN2 Template.
+* Removed RBN1 note labels from VENUE. (Caught by Linos)
+* Muted and locked the Venuegen tracks.
+* Hid EVENTS, VENUE, CAMERA, LIGHTING, and BEAT from Mixer. They will only show up in the regular Track panel.
+* Expert EADGBe have had "EXPERT" prefix removed so that "Show velocity numbers on notes" is more readable.
+* Add hidden 22 fret guitar tracks that are muted and locked. This is for sickos that need this. It is recommended to unhide and unlock them via the "Track Manager" then overwrite the template if you use this regularly.
+* Tried to redo per-track zoom that so that they're at a good starting point by default.
+* Replaced W1 Limiter on stem tracks with ReaXcomp and MGA JS Limiter (taken from RBN Mix Template). (In part due to opinions by vreyisgrey and Linos)
+* Replaced W1 Limiter on the master with Master Limiter.
+* Relabled effects on the master.
+* Bypassed the -6 dB plugin on the master.
+* Removed ReaGate from the DRYVOX tracks. This was copied from the C3 template and I don't think it was doing anything as it was set to `-inf`.
+* Maximized every track then vertically zoomed out by default.
+* DRYVOX track ReaTune instances have the plugin UI enabled when the plugin is brought back online (with CTRL+SHIFT+CLICK).
+
+#### Plugins
+* Added Chart Preview by noahbaxter.
+* Updated Loflyinjett's RB-Pro-Keys-Visualizer to 2.6 and renamed it to `LoflyinJetts_Pro_Keys_Visualizer.lua` so that future updates don't break the keybind.
+* Updated EncoreVocalPreview to 8abc91.
+* Updated SpanishLA to Feb 11 version.
+* Updated Pt-Brasil language pack to 759.
+* RBN Preview's theme was changed to one sent to me by Rulas25. It was made by Drihscol.
+</details>
+
+<details>
+<summary>2025-07-11T12:28:00+00:00 1752236880</summary>
+Initial version.
+</details>

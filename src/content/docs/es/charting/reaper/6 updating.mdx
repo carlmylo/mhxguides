@@ -1,0 +1,63 @@
+---
+title: "REAPER: Actualizando"
+slug: "es/charting/reaper/updating"
+description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 6
+  label: Actualizando
+---
+import explorerdrag from '@assets/charting/reaper/explorerdrag-win.gif';
+import { Image } from 'astro:assets';
+
+## Actualizando
+A medida que se mejoren las herramientas, saldrán actualizaciones para los plugins y scripts. Eso que puedes simplemente descargar todo de nuevo, también puedes actualizar solo los plugins y scripts.  
+Es igual como descargaste todo del inicio pero el archivo `.zip` tiene otro nombre.
+
+<a href="https://www.dropbox.com/scl/fi/kofagfu0fp8ua5th9elmj/REAPER-Files-Update-WIN.zip?rlkey=450pm5976sxx094xvax0jcq4y&st=16jube72&dl=1" target="_blank" rel="noopener noreferrer">[Haz click aquí para descargar los archivos de actualización para REAPER de una carpeta `.zip`.]</a>.
+    * a. Extrae el archivo `.zip` a un lugar conveniente.
+    * b. Arrastra la carpeta de `Common` al acceso directo que se llama de `DRAG 'COMMON' HERE`.
+    * c. Arrastra la carpeta de `REAPER` al acceso directo que se llama `DRAG 'REAPER' HERE`.  
+    * d. Reemplaza todos los archivos si te pregunta.
+    > <a href="https://www.dropbox.com/scl/fi/kofagfu0fp8ua5th9elmj/REAPER-Files-Update-WIN.zip?rlkey=450pm5976sxx094xvax0jcq4y&st=16jube72&dl=1" target="_blank" rel="noopener noreferrer"><Image src={explorerdrag} alt="Las carpetas siendo arrastrados a carpetas en formato de acceso directo." /></a>
+
+## Historial de versiones
+<details>
+<summary>2026-03-01T12:41:36+00:00 1772368691</summary>
+
+Esto es la primera actualización significante de la plantilla. La meta fue crear mas opciones para descargar: la descarga completa y una descarga que simplemente actualizara las scripts y los plugins sin tocar los archivos de plantilla. También existirá una versión para Linux de estas dos en el futuro.
+
+#### Plantilla
+* Se elimino un evento de `[play]` que se quedo en la pista de KEYS. (Encontrado por Linos)
+* Las lineas de cuadricula fueron activadas. (Encontrado por Linos)
+* Las notas "piloto" fueron silenciadas. Estas notas estan ahi para que los que usan la opción de "Ocultar fila de nota no utilizadas" para enforace solamente en experto cuando inicien una chart. Seguían causando problemas con MAGMA.
+* Todas las pistas fueron expandidas a compás 162, como en la plantilla de RBN2.
+* Se agrego la combinación de ALT+SHIFT+S para "Dividir notas en cuadricula". (Recomendado por AddyMills).
+* Cada instancia de ReaSynth fue copiada de la plantilla de RBN2.
+* Los nombres de notas de RBN1 fueron borrados de la pista de VENUE. (Encontrado por Linos)
+* Las pistas de Venuegen fueron bloqueadas y silenciadas.
+* Se escondieron las pistas de EVENTS, VENUE, CAMERA, LIGHTING y BEAT de la mezcladora. Solo se mostraran en la pantalla principal.
+* Notas de EADGBe no tienen el prefijo de "EXPERT" para que "Mostrar números de velocidad en las notas" sea mas legible.
+* Pistas de 22 trastes fueron agregadas, bloqueadas y silenciadas. Esto es para los raritos que las usen. Se recomienda que las desbloquees y quitar el silencio con "Administrador de pistas" y luego sobrescribir la plantilla si usas esto frecuentemente.
+* Se intento colocar el nivel de zoom a todas las pitas para tener un buen nivel por defecto.
+* W1 Limiter fue reemplazado por ReaXcomp y MGA JS Limiter en las pistas de stem (de la plantilla de mezcla de RBN). (Hecho en parte por opiniones de vreyisgrey y Linos)
+* W1 Limiter fue reemplazado en la pista maestra por Master Limiter.
+* Los efectos en la pista maestro tienes nombres nuevos.
+* Se desactivo el atenuador de -6 dB en la pista maestra.
+* ReaGate fue eliminado de las pistas de DRYVOX. Fue copiada de la plantilla de C3 y es posible que no estaba haciendo nada, ya que estaba configurado a `-inf`.
+* Todas las pistas fueron maximizadas y luego el zoom vertical fue reducido.
+* Las pistas de DRYVOX tiene una interfaz de ReaTune cuando el plugin se activa (con CTRL+SHIFT+CLICK).
+
+#### Plugins
+* Chart Preview de noahbaxter fue agregado.
+* Loflyinjett's RB-Pro-Keys-Visualizer fue actualizado a versión 2.6 y se re-nombro a `LoflyinJetts_Pro_Keys_Visualizer.lua` para que actualizaciones en el futuro no rompan el el atajo.
+* EncoreVocalPreview fue actualizado a 8abc91.
+* SpanishLA fue actualizado a la versión de Feb 11.
+* Pt-Brasil fue actualizado a la versión 759.
+* La apariencia de RBN Tools fue actualizada a una que fue mandada por Rulas25. Fue hecha por Drihscol.
+</details>
+
+<details>
+<summary>2025-07-11T12:28:00+00:00 1752236880</summary>
+Initial version.
+</details>

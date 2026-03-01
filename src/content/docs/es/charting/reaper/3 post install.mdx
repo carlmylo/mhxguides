@@ -1,0 +1,50 @@
+---
+title: "REAPER: Ajustes después de instalar"
+slug: "es/charting/reaper/postinstall"
+description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 3
+  label: Ajustes
+---
+import settingsopen from '@assets/charting/reaper/settingsopenes-win.png';
+import settingsbackup from '@assets/charting/reaper/settingsbackupes-win.png';
+import settingsaudio from '@assets/charting/reaper/settingsaudioes-win.png';
+import settingsmidi from '@assets/charting/reaper/settingsmidies-win.png';
+import settingspython from '@assets/charting/reaper/settingspythones-win.png';
+import { Image } from 'astro:assets';
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+1. Abre REAPER.
+
+2. Haz click en `Opciones` (`Options`) > `Preferencias` (`Preferences`).  
+    > <Image src={settingsopen} alt="REAPER con el cursor sobre 'Preferencias'." />
+
+3. Baja hacia a `Proyecto` (`Project`).
+
+4. Haz click en `Copias de seguridad` (`Backups`).  
+    * a. Activa `Guardar automáticamente en un archivo con marca de tiempo en el directorio del proyecto` (`Auto-save to timestamped file in project directory`).  
+    > <Image src={settingsbackup} alt="Las preferencias de REAPER, mostrando la sección de copias de seguridad." />
+5. Baja hacia a `Audio`.
+
+6. Haz click en `Dispositivo` (`Device`).
+    * a. Cambia `Sistema de audio` (`Audio System`) a `WASAPI`.  
+    > <Image src={settingsaudio} alt="Las preferencias de REAPER, mostrando la sección de Dispositivos." />
+
+7. Baja hacia a `Medios` (`Media`).
+
+8. Haz click en `MIDI`.
+    * a. Cambia `Ticks por negra para nuevos items MIDI` (`Ticks per quarter note for new MIDI items`) a `480`.
+    * b. Cambia `Conjunto de caracteres para exportar Eventos de texto intermedio .MID` (`Character set for exported .MID text events`) a `Latin-1`.  
+    > <Image src={settingsmidi} alt="Las preferencias de REAPER, mostrando la sección de MIDI." />
+
+9. Baja hacia a `Plug-ins`
+
+10. Haz click en `ReaScript`
+
+11. Activa `Activar Python para usar con ReaScript` (`Python for use with ReaScript`).
+    * a. Si REAPER no encuentra Python, usualmente está localizado en `%LOCALAPPDATA%\Programs\Python[version de Python]`
+    * b. La DLL siempre será nombrada `Python[version].dll`, por ejemplo `Python313.dll`
+    > <Image src={settingspython} alt="Las preferencias de REAPER, mostrando la sección de Python." />
+</Steps>
