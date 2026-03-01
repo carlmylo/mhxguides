@@ -1,0 +1,20 @@
+---
+title: "REAPER: Problemas y soluciones"
+slug: "es/charting/reaper/troubleshooting"
+description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 5
+  label: Problemas y soluciones
+---
+import errorplugin from '@assets/charting/reaper/errorplugines-win.png';
+import errordevice from '@assets/charting/reaper/errordevice-win.png';
+import { Image } from 'astro:assets';
+
+* ¡No me carga el plugin para visualizar (RBN Preview)!
+  * Te faltan archivos de Microsoft Visual C++ Redistributable Runtimes. <a href="https://kutt.it/vcpp" target="_blank" rel="noopener noreferrer">[Haz click aquí para descargarlos]</a>.  
+  > <Image src={errorplugin} alt="REAPER mostrando un error con RBN Preview." />
+* ¡REAPER me da `Error abriendo dispositivo` cuando cambio a WASAPI!
+  * `No se pudo encontrar entrada`: Es muy probable que tienes un micrófono conectado.  
+  Cambia `Canales de entrada` a `0` en la sección de `Dispositivos` en las Preferencias.  
+  > <Image src={errordevice} alt="REAPER mostrando un error que dice 'There was an error opening the audio hardware. WASAPI Error: could not find input device'." />

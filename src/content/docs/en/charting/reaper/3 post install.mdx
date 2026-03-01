@@ -1,0 +1,50 @@
+---
+title: "REAPER: Adjustments after installing"
+slug: "en/charting/reaper/postinstall"
+description: "How to set up REAPER to chart for Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 3
+  label: Adjustments
+---
+import settingsopen from '@assets/charting/reaper/settingsopen-win.png';
+import settingsbackup from '@assets/charting/reaper/settingsbackup-win.png';
+import settingsaudio from '@assets/charting/reaper/settingsaudio-win.png';
+import settingsmidi from '@assets/charting/reaper/settingsmidi-win.png';
+import settingspython from '@assets/charting/reaper/settingspython-win.png';
+import { Image } from 'astro:assets';
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+1. Open REAPER
+
+2. Click on `Options` > `Preferences`.  
+    > <Image src={settingsopen} alt="A cursor over 'Preferences' in REAPER" />
+
+3. Scroll down to `Project`
+
+4. Click on `Backups`.  
+    * a. Enable `Auto-save to timestamped file in project directory`.  
+    > <Image src={settingsbackup} alt="REAPER's Preferences showing the Backups section." />
+5. Scroll down to `Audio`.
+
+6. Click on `Device`.
+    * a. Change `Audio System` to `WASAPI`.  
+    > <Image src={settingsaudio} alt="REAPER's Preferences showing the Device section." />
+
+7. Scroll down to `Media`.
+
+8. Click on `MIDI`.
+    * a. Change `Ticks per quarter note for new MIDI items` to `480`.
+    * b. Change `Character set for exported .MID text events` to `Latin-1`.  
+    > <Image src={settingsmidi} alt="REAPER's Preferences showing the MIDI section." />
+
+9. Scroll down to `Plug-ins`  
+
+10. Click on `ReaScript`  
+
+11. Enable `Python for use with ReaScript`.
+    * a. If Python isn't found, it's usually in `%LOCALAPPDATA%\Programs\Python[Python Version]`
+    * b. The DLL will always be "`Python[version].dll`", i.e. `Python312.dll`
+    > <Image src={settingspython} alt="REAPER's Preferences showing the ReaScript section." />
+</Steps>

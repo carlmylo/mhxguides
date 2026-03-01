@@ -46,7 +46,7 @@ export default defineConfig({
         },
         {
           label: 'Charting',
-          autogenerate: { directory: 'charting/', },
+          autogenerate: { directory: 'charting/reaper', },
         },
       ],
 
