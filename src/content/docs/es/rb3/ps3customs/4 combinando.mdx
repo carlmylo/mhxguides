@@ -11,7 +11,7 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import rb3merge from '@assets/rb3/ps3customs/rb3mergees.png';
 import rb3mergeafter from '@assets/rb3/ps3customs/rb3mergeafteres.png';
-import rpcs3gamedata from '@assets/rb3/ps3customs/rpcs3gamedata.png';
+import rpcs3gamedata from '@assets/rb3/ps3customs/rpcs3gamedataes.png';
 import onyxhomequick from '@assets/rb3/ps3customs/onyxhomequick.png';
 import onyxdraganddropmerge from '@assets/rb3/ps3customs/onyxdraganddropmerge.gif';
 import onyxauthormerge from '@assets/rb3/ps3customs/onyxauthormerge.png';
@@ -30,10 +30,10 @@ import onyxcreatedpkgmergees from '@assets/rb3/ps3customs/onyxcreatedpkgmergees.
 import { Image } from 'astro:assets';
 
 Con el paso del tiempo, puede que tengas un montón de carpetas de customs.  
-Esto es un problema, ya que Rock Band 3 carga por carpeta y mientras más carpetas tengas, más tardará en cargar el juego.  
+Esto es un problema, ya que la version de PS3 de Rock Band 3 carga por carpeta y mientras más carpetas tengas, más tardará en cargar el juego.  
 <Image src={rb3merge} alt="Rock Band 3 cargando descargas de contenido. Esta cargando 94 paquetes." />  
 
-Idealmente, deberías empaquetar la mayor cantidad de canciones posibles en un solo pack para que Rock Band 3 cargue más rápido.  
+Idealmente, deberías empaquetar la mayor cantidad de canciones posible en un paquete para que Rock Band 3 cargue más rápido.  
 <Image src={rb3mergeafter} alt="Rock Band 3 cargando descargas de contenido. Esta cargando 48 paquetes." />  
 
 Gracias a la herramienta Onyx, esto es fácil. El proceso es casi igual a [[la guía de convertir archivos de Xbox 360 a RPCS3/PS3]](../360tops3/).  
@@ -45,50 +45,50 @@ Gracias a la herramienta Onyx, esto es fácil. El proceso es casi igual a [[la g
 Abre un explorador de archivos y entra a la carpeta donde están instaladas tus customs.  
 Usualmente, esto es `dev_hdd0\game\BLUS30463\USRDIR\`.  
 Si estas en PS3, vas a tener que transferir las carpetas que quieres combinar. Esto puede tomar un rato.  
-Si estas en RPCS3, puedes llegar ahí rápidamente haciendo un click derecho en Rock Band 3 y después en `Open Folder > Open Game Data Folder`.  
-<Image src={rpcs3gamedata} alt="RPCS3 con el cursor sobre 'Open Game Data Folder', dentro del menú despegable de 'Open Folder'." />
+Si estas en RPCS3, puedes llegar ahí rápidamente haciendo un click derecho en Rock Band 3 y después en `Abrir carpeta > Abrir carpeta de Datos de juego`.  
+<Image src={rpcs3gamedata} alt="RPCS3 con el cursor sobre 'Abrir carpeta de Datos de juego', dentro del menú despegable de 'Abrir carpeta'." />
 
 #### 2.
-Ahora, abre Onyx y haz click en <span title="Convertidor/empaquetador rápido">"<code>Quick convert/pack</code>"</span>.  
+Ahora, abre Onyx y haz click en <span title="Convertidor/empaquetador rápido">"`Quick convert/pack`"</span>.  
 <Image src={onyxhomequick} alt="La pantalla principal de Onyx. El cursor esta sobre 'Quick convert/pack'." />
 
 #### 3.
-Quédate en la pestaña de <span title="Convertidor rápido de RB + Creador de paquetes">"<code>RB quick convert + pack creator</code>"</span> tab.  
-Ahora, arrastra las carpetas que quieres combinar. También puedes usar <span title="Agregar canción de Rock Band">"<code>Add Rock Band Song</code>"</span> para elegirlas.  
+Quédate en la pestaña de <span title="Convertidor rápido de RB + Creador de paquetes">"`RB quick convert + pack creator`"</span> tab.  
+Ahora, arrastra las carpetas que quieres combinar. También puedes usar <span title="Agregar canción de Rock Band">"`Add Rock Band Song`"</span> para elegirlas.  
 <Image src={onyxdraganddropmerge} alt="Una animación de carpetas de customs siendo arrastradas a la pestaña de 'RB quick convert + pack creator' dentro de Onyx." />
 
-Es recomendado que actives la opción de <span title="Etiqueta de autor en DTA">"<code>Author to DTA tag</code>"</span> abajo a la derecha.  
+Es recomendado que actives la opción de <span title="Etiqueta de autor en DTA">"`Author to DTA tag`"</span> abajo a la derecha.  
 <Image src={onyxauthormerge} alt="Quick Convert dentro de Onyx. El cursor esta sobre 'Author to DTA' y esta resaltado." />
 
 #### 4.
-Abajo de la primera línea de botones grises, haz click en el primer menú y luego en <span title="Crear paquetes">"<code>Make Packs</code>"</span>.  
+Abajo de la primera línea de botones grises, haz click en el primer menú y luego en <span title="Crear paquetes">"`Make Packs`"</span>.  
 <Image src={onyxmakepacksmerge} alt="La de pantalla Quick Convert dentro de Onyx. El cursor presiono 'Make songs: produced a single file for each song' y despues elije 'Make packs: combine songs up to a maximum file size'." />
 
 #### 5.
-Abajo a la izquierda, elige entre `PKG (PS3)` o <span title="Carpetas (PS3)">"<code>`Folders (PS3)`</code>"</span>
-  * <span title="Carpetas (PS3)">"<code>`Folders (PS3)`</code>"</span> compila las canciones a un carpeta sin crear un archivo PKG. Esta opción es recomendada si usas RPCS3 o un PS3 con FTP.  
+Abajo a la izquierda, elige entre `PKG (PS3)` o <span title="Carpetas (PS3)">"``Folders (PS3)``"</span>
+  * <span title="Carpetas (PS3)">"``Folders (PS3)``"</span> compila las canciones a un carpeta sin crear un archivo PKG. Esta opción es recomendada si usas RPCS3 o un PS3 con FTP.  
   Es **mucho mas** rápido que hacer PKGs y puedes hacer carpetas que pesan mas de 4GB (4000 MiB).
   * `PKG (PS3)` compila un archivo PKG. Esto solo es recomendado si tienes un PS3 con cual tienes que usar una memoria USB para agregar canciones o si quieres compartir paquetes.
 
 <Tabs>
   <TabItem label="Folders (PS3)">
     <Image src={onyxoutfoldermergees} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Folders (PS3)'' y 'Encrypted .mid.edat' esta activado." />
-<Aside>**Usuarios de Deluxe pueden desactivar <span title="Encriptar .mid.edat">"<code>Encrypt .mid.edat</code>"</span>.  
+<Aside>**Usuarios de Deluxe pueden desactivar <span title="Encriptar .mid.edat">"`Encrypt .mid.edat`"</span>.  
 Es _mas_ rapido si lo desactivas.  
-Esto requiere <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.  
+Esto requiere <a href="https://rb3dx.milohax.org/es/" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.  
 ¡Mantén esto activo si vas a compartir un paquete!**</Aside>
 
 #### 6.
 _(Opcional pero recomendado)_  
 Por defecto, Onyx va a generar una carpeta con un nombre basado en la primera (o única) canción en el paquete, como `OxxxxxNombreDeCancion`.  
-Es recomendando usar un nombre personalizado. Simplemente, cambia la opción de <span title="Combinar a una subcarpeta de USRDIR nueva por paquete">"<code>Combine into one new USRDIR subfolder per pack</code>"</span> a la de <span title="Subfolder de USRDIR personalizado">"<code>Custom USRDIR subfolder</code>"</span>.  
+Es recomendando usar un nombre personalizado. Simplemente, cambia la opción de <span title="Combinar a una subcarpeta de USRDIR nueva por paquete">"`Combine into one new USRDIR subfolder per pack`"</span> a la de <span title="Subfolder de USRDIR personalizado">"`Custom USRDIR subfolder`"</span>.  
 <Image src={onyxfoldernamerpcs3mergees} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Custom USRDIR subfolder' en vez de 'Keep original USRDIR subfolders'." />
 
 Puedes hacer esto si solo es una canción también. Esto ayuda demasiado si quieres ser organizado y encontrar una canción entre las carpetas.  
 <Image src={onyxnamepackes} alt="Onyx con su pantalla de nombrar el paquete. El paquete fue nombrado 'paquete_de_customs'." />
 
 #### 7.
-Abajo, elige el botón verde que dice <span title="Crear paquete">"<code>Make Pack</code>"</span>.  
+Abajo, elige el botón verde que dice <span title="Crear paquete">"`Make Pack`"</span>.  
 <Image src={onyxmakepackrpcs3mergees} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Make 1 pack'." />
 
 Si estas en RPCS3, ve a donde tienes tu carpeta de `dev_hdd0`. Usualmente está en la carpeta de RPCS3.  
@@ -103,22 +103,22 @@ Si estas en PS3, tendrás una carpeta, lista para transferir por FTP a `dev_hdd0
 </TabItem>
   <TabItem label="PKG (PS3)">
     <Image src={onyxoutpkgmergees} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta en 'PS3 (PS3)' y 'Encrypted .mid.edat' esta activado." />  
-<Aside>**Usuarios de Deluxe pueden desactivar <span title="Encriptar .mid.edat">"<code>Encrypt .mid.edat</code>"</span>.  
+<Aside>**Usuarios de Deluxe pueden desactivar <span title="Encriptar .mid.edat">"`Encrypt .mid.edat`"</span>.  
 Es _mas_ rapido si lo desactivas.  
-Esto requiere <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.  
+Esto requiere <a href="https://rb3dx.milohax.org/es/" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.  
 ¡Mantén esto activo si vas a compartir un paquete!**</Aside>
 
 #### 6.
 _(Opcional pero recomendado)_  
 Por defecto, Onyx va a generar un PKG que instala una carpeta con un nombre basado en la primera (o única) canción en el paquete, como `OxxxxxNombreDeCancion`.  
-Es recomendando usar un nombre personalizado. Simplemente, cambia la opción de <span title="Combinar a una subcarpeta de USRDIR nueva por paquete">"<code>Combine into one new USRDIR subfolder per pack</code>"</span> a la de <span title="Subfolder de USRDIR personalizado">"<code>Custom USRDIR subfolder</code>"</span>.  
+Es recomendando usar un nombre personalizado. Simplemente, cambia la opción de <span title="Combinar a una subcarpeta de USRDIR nueva por paquete">"`Combine into one new USRDIR subfolder per pack`"</span> a la de <span title="Subfolder de USRDIR personalizado">"`Custom USRDIR subfolder`"</span>.  
 <Image src={onyxfoldernamepkgmergees} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Custom USRDIR subfolder' en vez de 'Keep original USRDIR subfolders'." />
 
 Puedes hacer esto si solo es una canción también. Esto ayuda demasiado si quieres ser organizado y encontrar una canción entre las carpetas.  
 <Image src={onyxnamepackes} alt="Onyx con su pantalla de nombrar el paquete. El paquete fue nombrado 'paquete_de_customs'." />
 
 #### 7.
-Abajo va ver un un botón verde que dice <span title="Crear paquete">"<code>Make Pack</code>"</span>.  
+Abajo va ver un un botón verde que dice <span title="Crear paquete">"`Make Pack`"</span>.  
 <Image src={onyxmakepackpkgmergees} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Make 1 pack'." />
 
 Elige una carpeta para poner el archivo PKG file y dale un nombre.  

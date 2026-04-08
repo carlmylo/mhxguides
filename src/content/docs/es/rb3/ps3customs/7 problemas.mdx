@@ -19,6 +19,10 @@ import nautilusps3batchloop from '@assets/rb3/ps3customs/nautilusps3batchloop.pn
 import nautilusps3batchloopproc from '@assets/rb3/ps3customs/nautilusps3batchloopproc.png';
 import ps3grey from '@assets/rb3/ps3customs/ps3grey.png';
 import ps3parentales from '@assets/rb3/ps3customs/ps3parentales.png';
+import rb3songloc from '@assets/rb3/ps3customs/rb3songloces.png';
+import mogginsdrag from '@assets/rb3/ps3customs/mogginsdrag.gif';
+import mogginspatch from '@assets/rb3/ps3customs/mogginspatch.png';
+import mogginspatched from '@assets/rb3/ps3customs/mogginspatched.png';
 import nautilushomecrypt from '@assets/rb3/ps3customs/nautilushomecrypt.png';
 import nautiluscryptdecrypt from '@assets/rb3/ps3customs/nautiluscryptdecrypt.png';
 import nautiluscryptdecryptmogg from '@assets/rb3/ps3customs/nautiluscryptdecryptmogg.gif';
@@ -30,10 +34,10 @@ import { Image } from 'astro:assets';
 Rock Band 3 solo puede guardar puntajes para canciones con IDs que contienen números **únicos** y nada mas. Si una canción tiene letras en el ID, el juego va a crear un ID nuevo cada vez que inicies. Esto significa que tus puntajes nunca se guardaran.
 
 Igualmente, tendrás problemas jugando en línea con customs por la misma razón. Si el ID tiene letras, la canción va a aparecer en tu biblioteca en gris.
-<Image src={missingsonges} alt="Rock Band 3 mostrando canciones con un color mas oscuro porque no están disponibles." />
+> <Image src={missingsonges} alt="Rock Band 3 mostrando canciones con un color mas oscuro porque no están disponibles." />
 
 Si tienes canciones con IDs duplicados, una de ellas no saldrá.
-<Image src={nautilusidclash} alt="Nautilus mostrando dos canciones con el mismo ID." />
+> <Image src={nautilusidclash} alt="Nautilus mostrando dos canciones con el mismo ID." />
 
 Puedes resolver ambos problemas con Nautilus.
 
@@ -45,19 +49,19 @@ Esta diseñado para evitar que pase esto.
 
 ### Arreglando IDs de customs que ya están instaladas
 <Steps>
-1. Abre Nautilus y elije <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>.  
-    <Image src={nautilushomeps3} alt="La pantalla principal de Nautilus. El cursor esta sobre 'PS3 Converter'." />
+1. Abre Nautilus y elije <span title="Convertidor de PS3">"`PS3 Converter`"</span>.
+    > <Image src={nautilushomeps3} alt="La pantalla principal de Nautilus. El cursor esta sobre 'PS3 Converter'." />
 
-2. Arriba de la pantalla de <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>, ve a:  
-<span title="Opciones de IDs numéricos > Remplazo de IDs por lotes">"<code>Numeric ID Options > Batch replace song IDs</code>"</span>  
-    <Image src={nautilusps3batchid} alt="PS3 Converter dentro de Nautilus. El cursor esta sobre 'Batch replace song IDs' bajo el menu de 'Numeric ID Options'." />
+2. Arriba de la pantalla de <span title="Convertidor de PS3">"`PS3 Converter`"</span>, ve a:  
+<span title="Opciones de IDs numéricos > Remplazo de IDs por lotes">"`Numeric ID Options > Batch replace song IDs`"</span>
+    > <Image src={nautilusps3batchid} alt="PS3 Converter dentro de Nautilus. El cursor esta sobre 'Batch replace song IDs' bajo el menú de 'Numeric ID Options'." />
 
 3. En PS3 o RPCS3, entra a la carpeta de la canción/paquete que tenga un ID incorrecto (usualmente es `dev_hdd0\game\BLUS30463\USRDIR\[nombre de paquete]\songs`).  
-Busca el archivo que se llama `songs.dta` dentro de la carpeta.  
-    <Image src={nautilusps3batchselectes} alt="Un explorador de archivos. 'dev_hdd0' esta elegido y el cursor esta sobre 'Open'." />
+Busca el archivo que se llama `songs.dta` dentro de la carpeta.
+    > <Image src={nautilusps3batchselectes} alt="Un explorador de archivos. 'dev_hdd0' esta elegido y el cursor esta sobre 'Open'." />
 
-4. Espera que termine de procesar las canciones de la carpeta. Cuando termine, puedes compartir el archivo `songs.dta` con tus amigos para finalmente poder jugar las canciones juntos.  
-    <Image src={nautilusps3batchdone} alt="PS3 Converter dentro de Nautilus. Acababa de terminar con el procesamiento de canciones con IDs malos." />
+4. Espera que termine de procesar las canciones de la carpeta. Cuando termine, puedes compartir el archivo `songs.dta` con tus amigos para finalmente poder jugar las canciones juntos.
+    > <Image src={nautilusps3batchdone} alt="PS3 Converter dentro de Nautilus. Acababa de terminar con el procesamiento de canciones con IDs malos." />
 </Steps>
 
 ## Canciones se quedan atoradas al final
@@ -67,16 +71,16 @@ A veces, algunas canciones se pueden quedar atoradas al final, repitiendo el úl
 * **¡No metas canciones que no tengan este problema, porque el sonido de la canción va ser procesado otra vez y va perder un poco de calidad!**
 
 <Steps>
-1. Abre Nautilus y ve a <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>.  
-    <Image src={nautilushomeps3} alt="La pantalla principal de Nautilus. El cursor esta sobre 'PS3 Converter'." />
+1. Abre Nautilus y ve a <span title="Convertidor de PS3">"`PS3 Converter`"</span>.
+    > <Image src={nautilushomeps3} alt="La pantalla principal de Nautilus. El cursor esta sobre 'PS3 Converter'." />
 
-2. Arriba de la pantalla de <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span> ve a:  
-<span title="Herramientas > Arreglar canciones con bucle por lotes">"<code>Tools > Batch fix looping songs</code>"</span>  
-    <Image src={nautilusps3batchloop} alt="PS3 Converter dentro de Nautilus. El cursor esta sobre 'Batch fix looping songs' bajo el menu de 'Tools'." />
+2. Arriba de la pantalla de <span title="Convertidor de PS3">"`PS3 Converter`"</span> ve a:  
+<span title="Herramientas > Arreglar canciones con bucle por lotes">"`Tools > Batch fix looping songs`"</span>
+    > <Image src={nautilusps3batchloop} alt="PS3 Converter dentro de Nautilus. El cursor esta sobre 'Batch fix looping songs' bajo el menú de 'Tools'." />
 
 3. Va la carpeta donde esta el CON con problemas y elige la carpeta.  
-Espera que termine.  
-    <Image src={nautilusps3batchloopproc} alt="PS3 Converter dentro de Nautilus. Esta procesando un archivo." />
+Espera que termine.
+    > <Image src={nautilusps3batchloopproc} alt="PS3 Converter dentro de Nautilus. Esta procesando un archivo." />
 
 4. Cuando termine, puedes continuar a la cuarta parte del [[tutorial principal]](../360tops3).
 </Steps>
@@ -84,34 +88,59 @@ Espera que termine.
 ## PS3: Canciones grises
 Por defecto, el control paterno de la PlayStation 3 esta en nivel 9.  
 Esto no te va dejar tocar canciones que tienen el dato de `Sin Calificación`, y aparecerán grises.  
-<Image src={ps3grey} alt="La collecion musical de Rock Band mostrando una cancion gris." />
+> <Image src={ps3grey} alt="La collecion musical de Rock Band mostrando una canción gris." />
 
 Si elijes una de estas canciones, el juego va a crashear.  
 Para arreglar esto, cambia el `Control paterno` a `No` en:  
 XMB: [ **Ajustes** ] -> [ **Ajustes de seguridad** ] -> [ **Control paterno** ] -> [ **No** ]  
-<Image src={ps3parentales} alt="El menu de control paterno en el menu de XMB de la PlayStation 3. El nivel esta en 'No'." />
+> <Image src={ps3parentales} alt="El menú de control paterno en el menú de XMB de la PlayStation 3. El nivel esta en 'No'." />
 
 ## Canciones siguen atoradas cargando
-En casos raros, algunas canciones tendrán problemas cargando, aún si seguiste todos los pasos anteriores.  
-Esto se puede arreglar con la opción de <span title="Criptór por lote">"<code>Batch Cryptor</code>"</span> en Nautilus.  
+Ciertas canciones pueden tener encriptación extraña que Nautilus no puede corregir.  
+Típicamente, esto causa que el juego se queda atorado cuando cargas la canción.
 
-<Aside>**Esto requiera <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.**</Aside>
+Lo bueno es que "MOGG Inspector" puede arreglar esto fácilmente!
 <Steps>
-1. Abre Nautilus y elige <span title="Criptór por lote">"<code>Batch Cryptor</code>"</span>.  
-    <Image src={nautilushomecrypt} alt="La pantalla principal de Nautilus con el cursor sobre 'Batch Cryptor'." />
+1. Encuentra la carpeta de la canción con problemas que contiene el archivo `.mogg`.  
+Usualmente va estar en `dev_hdd0\game\BLUS30463\USRDIR\[Nombre de paquete]\songs\[Canción con problemas]`.
+    > <Image src={findmogg} alt="Un explorador de archivos con un archivo de 'mogg' elegido." />
+    
+    Puedes simplificar el proceso usando la función de `Mostrar carpeta del tema` dentro de Rock Band 3 Deluxe.
+    > <Image src={rb3songloc} alt="Rock Band 3 Deluxe con una canción resaltada y 'Mostrar carpeta del tema' elegida en el menú. Salio una pantalla que contiene la dirección de la canción." />
+2. Arrastra el archivo `.mogg` a "MOGG Inspector".
+    > <Image src={mogginsdrag} alt="Arrastrado un archivo 'mogg' a MOGG Inspector." />
 
-2. Cambia a la opción de <span title="Desencriptar">"<code>Decrypt</code>"</span> abajo de la pantalla.  
-    <Image src={nautiluscryptdecrypt} alt="Batch Cryptor con la opcion cambiada a 'Decrypt'." />
+3. Va ver una advertencia que dice <span title="¡Enmascaramiento de PS3 incorrecto detectado!">"`Incorrect PS3 keymask found!`"</span>.  
+Haz click en <span title="Corregir enmascaramiento de PS3">"`Patch PS3 keymask`"</span>.
+    > <Image src={mogginspatch} alt="'MOGG Inspector' alertando el usuario que se detecto enmascaramiento de PS3 incorrecta en letras rojas. El cursor esta sobre 'Patch PS3 keymask'." />
+3. "MOGG Inspector" te dara una advertencia que dice <span title="Enmascaramiento de PS3 CORREGIDO">"`Correct keymask now PATCHED`"</span>.
+    > <Image src={mogginspatched} alt="'MOGG Inspector' declarando que el enmascaramiento ha sido corregido." />
+</Steps>
+
+¡Eso es todo!  
+Si esto no lo arregla, sigue leyendo abajo para mas instrucciones.
+
+## Opción alternativa para canciones que siguen atoradas
+En casos raros, algunas canciones tendrán problemas cargando, aún si seguiste todos los pasos anteriores _y_ usaste "MOGG Inspector".  
+Esto se puede arreglar con la opción de <span title="Criptór por lote">"`Batch Cryptor`"</span> en Nautilus.  
+
+<Aside>**Esto requiera <a href="https://rb3dx.milohax.org/es/" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.**</Aside>
+<Steps>
+1. Abre Nautilus y elige <span title="Criptór por lote">"`Batch Cryptor`"</span>.
+    > <Image src={nautilushomecrypt} alt="La pantalla principal de Nautilus con el cursor sobre 'Batch Cryptor'." />
+
+2. Cambia a la opción de <span title="Desencriptar">"`Decrypt`"</span> abajo de la pantalla.
+    > <Image src={nautiluscryptdecrypt} alt="Batch Cryptor con la opcion cambiada a 'Decrypt'." />
 
 3. Ve a la carpeta donde está la canción que quieres arreglar.  
-Usualmente va estar en `dev_hdd0\game\BLUS30463\USRDIR\[Nombre de paquete]\songs\[Canción con problemas]`.  
-    <Image src={findmogg} alt="Un explorador de archivos con un archivo de mogg elegido." />
+Usualmente va estar en `dev_hdd0\game\BLUS30463\USRDIR\[Nombre de paquete]\songs\[Canción con problemas]`.
+    > <Image src={findmogg} alt="Un explorador de archivos con un archivo de 'mogg' elegido." />
 
-4. Arrastra el archivo `.mogg` en la pantalla de <span title="Criptór por lote">"<code>Batch Cryptor</code>"</span> y haz click en <span title="Iniciar">"<code>Begin</code>"</span>.  
-    <Image src={nautiluscryptdecryptmogg} alt="Un animacion de un archivo de .mogg siendo arrastrado a 'Batch Cryptor' y el archivo siendo desencriptado." />
+4. Arrastra el archivo `.mogg` en la pantalla de <span title="Criptór por lote">"`Batch Cryptor`"</span> y haz click en <span title="Iniciar">"`Begin`"</span>.
+    > <Image src={nautiluscryptdecryptmogg} alt="Un animacion de un archivo de .mogg siendo arrastrado a 'Batch Cryptor' y el archivo siendo desencriptado." />
 
 5. Una carpeta llamada `decrypted` va a aparecer cuando termine.  
 Entra a la carpeta de `decrypted` y corta el archivo `.mogg` adentro.  
-Regresa una carpeta para atrás y pega el archivo `.mogg`, remplazando el original.  
-    <Image src={moggreplace} alt="Una animación de un archivo .mogg dentro de la carpeta de 'decrypted' siendo cortada y luego pegada a la carpeta anterior. Reemplaza el archivo .mogg viejo." />
+Regresa una carpeta para atrás y pega el archivo `.mogg`, remplazando el original.
+    > <Image src={moggreplace} alt="Una animación de un archivo .mogg dentro de la carpeta de 'decrypted' siendo cortada y luego pegada a la carpeta anterior. Reemplaza el archivo .mogg viejo." />
 </Steps>

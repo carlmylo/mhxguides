@@ -1,45 +1,50 @@
 ---
-title: Eliminando canciones de paquetes
+title: Eliminando canciones
 slug: "es/rb3/ps3customs/delete"
-description: "Como eliminar canciones de un paquete."
+description: "Como eliminar canciones de Rock Band 3."
 tableOfContents: false
 sidebar:
   order: 5
   group: "PS3Customs"
 ---
 import { Steps } from '@astrojs/starlight/components';
-import rb3delwarn from '@assets/rb3/ps3customs/rb3delwarn.png';
-import nautilushomepack from '@assets/rb3/ps3customs/nautilushomepack.png';
-import findpack from '@assets/rb3/ps3customs/findpack.png';
-import findfolder from '@assets/rb3/ps3customs/findfolder.png';
-import nautiluspackdrag from '@assets/rb3/ps3customs/nautiluspackdrag.gif';
-import nautiluspacksel from '@assets/rb3/ps3customs/nautiluspacksel.png';
-import nautiluspackdone from '@assets/rb3/ps3customs/nautiluspackdone.png';
+import rb3delwarn from '@assets/rb3/ps3customs/rb3delwarnes.png';
+import nautilushomefileindex from '@assets/rb3/ps3customs/nautilushomefileindex.png';
+import nautilusfileindexaddfolder from '@assets/rb3/ps3customs/nautilusfileindexaddfolder.png';
+import nautilusfileindexbuild from '@assets/rb3/ps3customs/nautilusfileindexbuild.png';
+import addfolder from '@assets/rb3/ps3customs/addfolderes.png';
+import nautilusfileindexyes from '@assets/rb3/ps3customs/nautilusfileindexyes.png';
+import nautilusfileindexselid from '@assets/rb3/ps3customs/nautilusfileindexselid.png';
+import nautilusfileindexdel from '@assets/rb3/ps3customs/nautilusfileindexdel.png';
+import nautilusfileindexdelsearch from '@assets/rb3/ps3customs/nautilusfileindexdelsearch.png';
 import { Image } from 'astro:assets';
 
-Rock Band 3 puede borrar canciones dentro del juego, pero si las canciones es parte de un paquete, también va a borrar el resto del paquete.  
+Rock Band 3 puede borrar canciones dentro del juego, **pero** si las canciones es parte de un paquete, también va a borrar el resto del paquete.  
 <Image src={rb3delwarn} alt="Rock Band 3 advirtiendo que va a borrar 140 temas de la colección." />
 
-La mejor manera de arreglar esto es usando el' <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.
+La mejor manera de borrar canciones es usando el <span title="Indexador de archivos">"`File Indexer`"</span> dentro de Nautilus.
 
 <Steps>
-1. Abre Nautilus y elije <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.
-    > <Image src={nautilushomepack} alt="La pantalla principal de Nautilus. El cursor esta sobre 'Quick Pack Editor'." />
+1. Abre Nautilus y elije <span title="Indexador de archivos">"`File Indexer`"</span>.
+    > <Image src={nautilushomefileindex} alt="Nautilus' main screen. A cursor hovers over 'Quick Pack Editor'." />
 
-2. Abre un explorador de archivos y entra a la carpeta del paquete que tiene las canciones que quieras eliminar.  
-Esto usualmente esta dentro de `dev_hdd0\game\BLUS30463\USRDIR\`  
-    > <Image src={findpack} alt="Un explorador de Windows. Esta mostrando la carpeta de USRDIR de Rock Band 3. Esto contiene todos los paquetes de Rock Band 3." />
+2. Haz click en <span title="Agregar nueva carpeta">"`Add New Folder`"</span>.
+    > <Image src={nautilusfileindexaddfolder} alt="Dentro de File Indexer. El cursor esta sobre 'Add New Folder'." />
 
-3. Encuentra el archivo `songs.dta`. Estará dentro de la carpeta de `songs`, como `USRDIR\[Nombre de paquete]\songs`.  
-    > <Image src={findfolder} alt="Un explorador de Windows. Esta resaltado un archivo de `songs.dta` dentro de la carpeta de `songs` en un paquete." />
+3. Ve a la carpeta donde están los datos (DLC) de Rock Band.  
+Esto es `dev_hdd0\game\BLUS30463\` para contenido de Rock Band 3 y usualmente `dev_hdd0\game\BLUS30050\` para contenido de Rock Band 1/2.
+    > <Image src={addfolder} alt="Un explorador de Windows. Esta elegida una carpeta de Rock Band 3 que se llama 'BLUS30463'." />
 
-4. Arrastra y suelta el archivo `songs.dta` dentro de la carpeta en la pantalla de <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.  
-    > <Image src={nautiluspackdrag} alt="Un archivo de `songs.dta` siendo arrastrado al 'Quick Pack Editor' de Nautilus." />
+4. Activa <span title="Modo de PS3 (revisa por archivos de songs.dta)">"`PS3 Mode (check for songs.dta files)`"</span> en el medio y luego haz click en <span title="Crear índice">"`Build Index`"</span>.
+    > <Image src={nautilusfileindexbuild} alt="Dentro de 'File Indexer' con 'PS3 Mode (check for songs.dta files)' activo y el cursor sobre 'Build Index'." />
 
-5. Cambia el modo de  <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span> a <span title="Editar entradas de DTA y contenido del paquete">"<code>Edit DTA entries and pack contents</code>"</span>.  
-Elige las canciones que quieres borrar y haz click en <span title="Eliminar elegidas">"<code>Remove selected</code>"</span>.  
-    > <Image src={nautiluspacksel} alt="'Quick Pack Editor' esta mostrando canciones elegidas y resaltadas. Se resalta 'Edit DTA entries and pack contents' y el cursor esta sobre 'Remove selected'." />
+5. Haz click en <span title="Si">"`Yes`"</span> en la advertencia. Simplemente dice que puede tardar un rato, depende del tamaño de tu colección de música.
+    > <Image src={nautilusfileindexyes} alt="Una advertencia que dice que puede tardar un rato. El cursor esta sobre 'Yes'." />
 
-6. Cuando termines, haz click en <span title="Guardar">"<code>Save</code>"</span> para guardar tus cambios.  
-    > <Image src={nautiluspackdone} alt="El historial de 'Quick Pack Editor' diciendo que un archivo de `songs.dta` nuevo fue creado." />
+6. Encuentra la(s) cancion(es) que quieres eliminar y hazle click derecho. Elige <span title="Eliminar archivo(s) elegido(s)">"`Delete selected file(s)`"</span>. También puedes presionar la tecla de `Supr(imir)`.
+    > <Image src={nautilusfileindexdel} alt="Eligiendo una canción dentro de 'File Indexer' con click derecho. El cursor esta sobre 'Delete selected files(s).'" />
+
+    Para encontrar la canción mas rápido, puedes buscarla escribiendo el nombre en la barra de búsqueda abajo de la pantalla de <span title="Indexador de archivos">"`File Indexer`"</span>.
+    > <Image src={nautilusfileindexdelsearch} alt="Buscando una canción para eliminar dentro de 'File Indexer'. Después de hacer click derecho en la canción, el cursor esta sobre 'Delete selected file(s).'" />
+
 </Steps>
