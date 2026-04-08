@@ -1,26 +1,21 @@
 ---
-title: Finding duplicate songs
+title: Finding hidden songs
 slug: "en/rb3/ps3customs/duplicates"
-description: "How to delete duplicate songs from Rock Band 3."
+description: "How to delete duplicate songs which aren't showing up in Rock Band 3."
 tableOfContents: false
 sidebar:
   order: 6
 ---
 import { Steps } from '@astrojs/starlight/components';
 import rb3songcount from '@assets/rb3/ps3customs/rb3songcount.png';
-import nautilusfileindex from '@assets/rb3/ps3customs/nautilusfileindex.png';
+import nautilushomefileindex from '@assets/rb3/ps3customs/nautilushomefileindex.png';
 import nautilusfileindexaddfolder from '@assets/rb3/ps3customs/nautilusfileindexaddfolder.png';
 import nautilusfileindexbuild from '@assets/rb3/ps3customs/nautilusfileindexbuild.png';
 import addfolder from '@assets/rb3/ps3customs/addfolder.png';
 import nautilusfileindexyes from '@assets/rb3/ps3customs/nautilusfileindexyes.png';
 import nautilusfileindexselid from '@assets/rb3/ps3customs/nautilusfileindexselid.png';
 import nautilusfileindexlist from '@assets/rb3/ps3customs/nautilusfileindexlist.png';
-import nautilushomepack from '@assets/rb3/ps3customs/nautilushomepack.png';
-import findpack from '@assets/rb3/ps3customs/findpack.png';
-import findfolder from '@assets/rb3/ps3customs/findfolder.png';
-import nautiluspackdrag from '@assets/rb3/ps3customs/nautiluspackdrag.gif';
-import nautiluspacksel from '@assets/rb3/ps3customs/nautiluspacksel.png';
-import nautiluspackdone from '@assets/rb3/ps3customs/nautiluspackdone.png';
+import nautilusfileindexdeldup from '@assets/rb3/ps3customs/nautilusfileindexdeldup.png';
 import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
@@ -34,7 +29,7 @@ You can use Nautilus to help solve this problem.
 
 <Steps>
 1. Open Nautilus and select `File Indexer`.
-    > <Image src={nautilusfileindex} alt="Nautilus' main screen. A cursor hovers over 'File Indexer'." />
+    > <Image src={nautilushomefileindex} alt="Nautilus' main screen. A cursor hovers over 'File Indexer'." />
 
 2. Click on `Add New Folder`.
     > <Image src={nautilusfileindexaddfolder} alt="File Indexer with a cursor over 'Add new folder'." />
@@ -56,23 +51,6 @@ This will be `dev_hdd0\game\BLUS30463\` for Rock Band 3 content and usually `dev
 <Aside>You may have to increase the window size to see all of the information.</Aside>
     > <Image src={nautilusfileindexlist} alt="A list of songs in File Indexer. Each song is duplicated twice and since they are included in two packs." />
 
-8. While leaving `File Indexer` open, go back to the start page of Nautilus and select `Quick Pack Editor`.
-    > <Image src={nautilushomepack} alt="Nautilus' main screen. A cursor hovers over 'Quick Pack Editor'." />
-
-9. Open a file browser window and navigate to the pack's folder that contains the duplicates you want to remove.  
-These are usually located in `dev_hdd0\game\BLUS30463\USRDIR\`.  
-    > <Image src={findpack} alt="A Windows Explorer window. It's showing the USRDIR of Rock Band 3, with various folders that are music packs." />
-
-10. Look for the `songs.dta` file. It will be in the `songs` folder, like `USRDIR\[Pack Name]\songs`.  
-    > <Image src={findfolder} alt="A Windows Explorer window. It's showing a 'songs.dta' file within a pack's 'songs' folder." />
-
-11. Drag the `songs.dta` file into the `Quick Pack Editor`.  
-    > <Image src={nautiluspackdrag} alt="A `songs.dta` file being dragged into Nautilus' `Quick Pack Editor`." />
-
-12. Change `Quick Pack Editor` to `Edit DTA entries and pack contents`.  
-Select the songs you want to remove then click `Remove selected`.  
-    > <Image src={nautiluspacksel} alt="'Quick Pack Editor' showing some songs selected. A highlight is over 'Edit DTA entries and pack contents' and the cursor is over 'Remove selected'." />
-
-13. When you're done, click `Save` to apply changes.  
-    > <Image src={nautiluspackdone} alt="'Quick Pack Editor' with a log that says that the new `songs.dta` was created. The cursor is over `Save`." />
+8. Right click the song (or songs) you want to delete. Alternatively, you can press the `Delete` key on your keyboard
+    > <Image src={nautilusfileindexdeldup} alt="A duplicate of a song being right clicked in File Indexer. The cursor hovers over 'Delete selected file(s).'." />
 </Steps>
