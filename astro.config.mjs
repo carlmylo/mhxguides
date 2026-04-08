@@ -24,6 +24,7 @@ export default defineConfig({
         alt: 'MiloHax Guides',
         replacesTitle: true,
       },
+      lastUpdated: true,
       social: [
         { icon: 'information', label: 'Website', href: 'https://milohax.org/' },
         { icon: 'discord', label: 'Discord', href: 'https://discord.gg/milohax' },
