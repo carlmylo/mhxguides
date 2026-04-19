@@ -1,50 +1,162 @@
 ---
 title: "REAPER: Ajustes después de instalar"
 slug: "es/charting/reaper/postinstall"
-description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
-tableOfContents: false
+description: "Ajustando REAPER para que sea mejor para chartear."
 sidebar:
   order: 3
-  label: Ajustes
+  label: Postinstalación
 ---
-import settingsopen from '@assets/charting/reaper/settingsopenes-win.png';
-import settingsbackup from '@assets/charting/reaper/settingsbackupes-win.png';
+import reapackok from '@assets/charting/reaper/reapack-ok.png';
+import settingsaudioalert from '@assets/charting/reaper/settingsaudioalertes.png';
+import errordevicegnu from '@assets/charting/reaper/errordevicees-gnu.png';
+import settingsopen from '@assets/charting/reaper/settingsopenes.png';
 import settingsaudio from '@assets/charting/reaper/settingsaudioes-win.png';
-import settingsmidi from '@assets/charting/reaper/settingsmidies-win.png';
-import settingspython from '@assets/charting/reaper/settingspythones-win.png';
+import settingsaudioarch from '@assets/charting/reaper/settingsaudioes-arch.png';
+import settingsbackup from '@assets/charting/reaper/settingsbackupes.png';
+import settingsfades from '@assets/charting/reaper/settingsfadeses.png';
+import settingsloop from '@assets/charting/reaper/settingsloopes.png';
+import settingstcp from '@assets/charting/reaper/settingstcpes.png';
+import settingsmidi from '@assets/charting/reaper/settingsmidies.png';
+import settingspythonwin from '@assets/charting/reaper/settingspythones-win.png';
+import settingspythonarch from '@assets/charting/reaper/settingspythones-arch.png';
+import archfindpython from '@assets/charting/reaper/arch-findpython.png';
+import settingspythongnu from '@assets/charting/reaper/settingspythones-gnu.png';
+import gnufindpython from '@assets/charting/reaper/gnu-findpython.png';
+import { Icon } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
+Ahora que REAPER se instalo, vamos a ajustar unas cosas para evitar errores y mejorar tu experiencia.
+
+Empezamos abriendo REAPER.
+
+Si te sale una pantalla de ReaPack, haz click en `OK` para cerrarlo.
+> <Image src={reapackok} alt="ReaPack con una pantalla para ver repositorios. El cursor esta sobre 'OK'." />
+
+## Audio
 <Steps>
-1. Abre REAPER.
+1. Cuando abras REAPER después de instalar todo, te debe de salir una pantalla que te pregunta si quieres elegir un dispositivo de audio.  
+    Elige `Si`.
+    > <Image src={settingsaudioalert} alt="REAPER alertando el usuario que no ha elegido un dispositivo de audio." />
+    Si te sale que hay error, elige `Dispositivo de audio`.
+    > <Image src={errordevicegnu} alt="REAPER alertando el usuario que no se puede abrir el dispositivo de audio." />
 
-2. Haz click en `Opciones` (`Options`) > `Preferencias` (`Preferences`).  
+    Si no sale ninguna advertencia, haz click en `Opciones` > `Preferencias` y baja a la sección de `Audio` > `Dispositivo`.
     > <Image src={settingsopen} alt="REAPER con el cursor sobre 'Preferencias'." />
-
-3. Baja hacia a `Proyecto` (`Project`).
-
-4. Haz click en `Copias de seguridad` (`Backups`).  
-    * a. Activa `Guardar automáticamente en un archivo con marca de tiempo en el directorio del proyecto` (`Auto-save to timestamped file in project directory`).  
-    > <Image src={settingsbackup} alt="Las preferencias de REAPER, mostrando la sección de copias de seguridad." />
-5. Baja hacia a `Audio`.
-
-6. Haz click en `Dispositivo` (`Device`).
-    * a. Cambia `Sistema de audio` (`Audio System`) a `WASAPI`.  
-    > <Image src={settingsaudio} alt="Las preferencias de REAPER, mostrando la sección de Dispositivos." />
-
-7. Baja hacia a `Medios` (`Media`).
-
-8. Haz click en `MIDI`.
-    * a. Cambia `Ticks por negra para nuevos items MIDI` (`Ticks per quarter note for new MIDI items`) a `480`.
-    * b. Cambia `Conjunto de caracteres para exportar Eventos de texto intermedio .MID` (`Character set for exported .MID text events`) a `Latin-1`.  
-    > <Image src={settingsmidi} alt="Las preferencias de REAPER, mostrando la sección de MIDI." />
-
-9. Baja hacia a `Plug-ins`
-
-10. Haz click en `ReaScript`
-
-11. Activa `Activar Python para usar con ReaScript` (`Python for use with ReaScript`).
-    * a. Si REAPER no encuentra Python, usualmente está localizado en `%LOCALAPPDATA%\Programs\Python[version de Python]`
-    * b. La DLL siempre será nombrada `Python[version].dll`, por ejemplo `Python313.dll`
-    > <Image src={settingspython} alt="Las preferencias de REAPER, mostrando la sección de Python." />
 </Steps>
+<Tabs>
+  <TabItem label="Windows">
+<Steps>
+2. Cambia `Sistema de audio` a `WASAPI`.  
+    > <Image src={settingsaudio} alt="Las preferencias de REAPER, mostrando la sección de Dispositivos." />
+    Puedes tratar `Sonido Directo` o `Solida de onda` pero estas opciones tienen mas latencia.
+    Si tienes una interfaz de sonido decente, puedes usar `ASIO` para tener latencia mínima.
+</Steps>
+</TabItem>
+<TabItem label="Linux">
+<Steps>
+2. Cambia `Sistema de audio` a la opción que funciona mejor para ti. `JACK` se recomienda porque suele ser el sistema mas fácil.
+    > <Image src={settingsaudioarch} alt="Las preferencias de REAPER, mostrando la sección de Dispositivos." />
+    Puedes tratar `Pulse de audio` o `ALSA` si `JACK` no es compatible o si simplemente quieres usar otra cosa.
+</Steps>
+</TabItem>
+</Tabs>
+
+## Copias de seguridad/respaldo
+<Steps>
+1. Baja hacia a `Proyecto`.
+
+2. Haz click en `Copias de seguridad`.
+    * a. Activa `Guardar automáticamente en un archivo con marca de tiempo en el directorio del proyecto`. 
+        > <Image src={settingsbackup} alt="Las preferencias de REAPER, mostrando la sección de copias de seguridad." />
+</Steps>
+
+## Desvanecimiento del ítem por default
+<Steps>
+1. Baja hacia a `Proyecto`.
+
+2. Haz click en `Desvanecimiento del ítem por default`
+    * a. Cambia `Fundido de entrada/solida por default:` a `0:00.000`
+    * b. Cambia `Fundido cruzado por default` a `0:00.035`
+    * c. Cambia el menú despegable al lado de `Items multimedia dividios` a `Respetar botón de fundido cruzado automático de la barra de herramientas`
+    * d. Cambia el menú despegable abajo de esa sección a `Fundido cruzado al centro`
+    * e. Cambia `'Recortar contenido detrás de las ediciones con navaja' activado` a `Superposición y fundido cruzado`
+    > <Image src={settingsfades} alt="Las preferencias de REAPER, mostrando la sección de 'Desvanecimiento del ítem por default'." />
+</Steps>
+
+## Valores por default del bucles del item
+<Steps>
+1. Baja hacia a `Proyecto`.
+
+2. Haz click en `Valores por default del bucle del item`.
+
+3. Desactiva todas las opciones bajo  `Origen del bucle para:`.
+    > <Image src={settingsloop} alt="Las preferencias de REAPER, mostrando la sección de copias de seguridad." />
+</Steps>
+
+## Comportamiento de carpetas de pistas
+<Steps>
+1. Baja hacia a `Apariencia`.
+
+2. Haz click en `Paneles de control de pista`
+    * a. Cambia `Indicadores de agrupación de pista` a `Lineas en el borde`
+    * b. Cambia `Boton de colapso de la carpeta cambia la altura de la pista` a `Normal, oculto` o `Normal, pequeño, oculto`
+    > <Image src={settingstcp} alt="Las preferencias de REAPER, mostrando la sección de 'Paneles de control de pista'." />
+</Steps>
+
+## Ajustes de MIDI
+<Steps>
+1. Baja hacia a `Medios`.
+
+2. Haz click en `MIDI`.
+    * a. Cambia `Ticks por negra para nuevos items MIDI` a `480`.
+    * b. Cambia `Conjunto de caracteres para exportar Eventos de texto intermedio .MID` a `Latin-1`.  
+    > <Image src={settingsmidi} alt="Las preferencias de REAPER, mostrando la sección de MIDI." />
+    Rock Band requiere que las pistas de MIDI solo tengan `480` "Ticks" por negra. Sin esto, el juego y las herramientas fallan de maneras raras.
+</Steps>
+
+## Activando Python
+<Steps>
+1. Baja hacia a `Plug-ins`
+
+2. Haz click en `ReaScript`
+</Steps>
+<Tabs>
+  <TabItem label="Windows">
+<Steps>
+3. Activa `Activar Python para usar con ReaScript`.
+    * a. Si REAPER no encuentra Python automáticamente, usualmente está localizado en `C:\Users\[Usuario]\AppData\Local\Programs\Python[versión de Python]`
+    * b. La DLL siempre será nombrada `Python[versión].dll`, por ejemplo `Python314.dll`
+    > <Image src={settingspythonwin} alt="Las preferencias de REAPER, mostrando la sección de Python." />
+</Steps>
+</TabItem>
+  <TabItem label="Arch">
+<Steps>
+3. Activa `Activar Python para usar con ReaScript`.
+    * a. Si REAPER no encuentra Python automáticamente, cambia la ruta personalizada a `/usr/lib`
+    * b. Cambia `Obligar a ReaScript a usar Python especifico .so` a `/libpython3.so`
+    > <Image src={settingspythonarch} alt="Las preferencias de REAPER, mostrando la sección de Python." />
+</Steps>
+Si esto no funciona, necesitas buscar Python3. La manera mas fácil es usando este comando en la terminal:
+```bash
+find /usr/lib -name "libpython3*.so"
+```
+Esto va encontrar todas las instalaciones de Python3 en tu computadora.
+> <Image src={archfindpython} alt="Una terminal mostrando dos entradas de Python3." />
+</TabItem>
+  <TabItem label="Debian (incluso Ubuntu)">
+<Steps>
+3. Activa `Activar Python para usar con ReaScript`.
+    * a. Si REAPER no encuentra Python automáticamente, cambia la ruta personalizada a `/usr/lib/x86_64-linux-gnu/libpeas-1.0/loaders/`
+    * b. Cambia `Obligar a ReaScript a usar Python especifico .so` a `libpython3loader.so`
+    > <Image src={settingspythongnu} alt="Las preferencias de REAPER, mostrando la sección de Python." />
+</Steps>
+Si esto no funciona, necesitas buscar Python3. La manera mas fácil es usando este comando en la terminal:
+```bash
+find /usr/lib -name "libpython3*.so"
+```
+Esto va encontrar todas las instalaciones de Python3 en tu computadora.
+> <Image src={gnufindpython} alt="Una terminal mostrando dos entradas de Python3." />
+</TabItem>
+</Tabs>

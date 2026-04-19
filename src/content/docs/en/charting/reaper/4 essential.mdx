@@ -1,43 +1,61 @@
 ---
-title: "REAPER: Essential Resources"
+title: "REAPER: Essentials"
 slug: "en/charting/reaper/essential"
-description: "How to set up REAPER to chart for Rock Band 3."
-tableOfContents: false
+description: "Some information to keep in mind for charting."
 sidebar:
   order: 4
-  label: Essential Resources
+  label: Essentials
 ---
+import chartchotic from '@assets/charting/reaper/plugins-chartchotic.png';
+import encorevox from '@assets/charting/reaper/plugins-encorevox.png';
+import eventstools from '@assets/charting/reaper/plugins-eventstools.png';
+import hopcat from '@assets/charting/reaper/plugins-hopcat.png';
+import prokeyspreview from '@assets/charting/reaper/plugins-prokeyspreview.png';
+import venuegen from '@assets/charting/reaper/plugins-venuegen.png';
+import venuepreview from '@assets/charting/reaper/plugins-venuepreview.png';
 import { Image } from 'astro:assets';
 
 ## Important keybinds
 The following shortcuts have been added:
-* F6 - <a href="https://github.com/Loflyinjett/RB-Pro-Keys-Visualizer" target="_blank" rel="noopener noreferrer">[Pro Keys Preview]</a>: See your Pro Keys chart in real time.
-* F7 - <a href="https://github.com/RaiderGG/EVENTS-Tools" target="_blank" rel="noopener noreferrer">[EVENTS Tools]</a>: Tools for the EVENTS track.
-* F8 - <a href="https://github.com/tposejank/EncoreVocalPreview/" target="_blank" rel="noopener noreferrer">[EncoreVoxPreview]</a>: See your vocal chart in real time.
-* F9 - <a href="https://github.com/poliwhirlge/CAT" target="_blank" rel="noopener noreferrer">[CAT]</a>: Various tools for customs authors.
-* F10 - <a href="https://github.com/Deevun155/venuegen" target="_blank" rel="noopener noreferrer">[VenueGen]</a>: Tools for creating VENUES.
+* F6 - <a href="https://github.com/RaiderGG/EVENTS-Tools" target="_blank" rel="noopener noreferrer">[EVENTS Tools]</a>: Tools for the EVENTS track. Helps simplify dealing with crowd states and section events.  
+  > <Image src={eventstools} alt="EVENTS Tools, showing utilites to send markers to sections, add music start and end events, and various crowd events." /> 
+* F7 - <a href="https://github.com/tposejank/EncoreVocalPreview/" target="_blank" rel="noopener noreferrer">[EncoreVoxPreview]</a>: See your vocal chart in real time. Includes harmonies as well!  
+Swap between tracks with `[` and `]` keys.
+  > <Image src={encorevox} alt="Encore Vox Preview showing three vocal parts. They each have different lyrics and are separated by color." />
+* F8 - <a href="https://github.com/Hoph2o/HOPCAT/" target="_blank" rel="noopener noreferrer">[HOPCAT]</a>: A cleaned up and updated version of CAT. This is a utility that does an astounding amount of things and helps with tedious tasks.
+  > <Image src={hopcat} alt="HOPCAT showing various utilites like automatic animations, reductions, and many other things." />
+* F9 - <a href="https://github.com/Deevun155/venuegen" target="_blank" rel="noopener noreferrer">[VenueGen]</a>: Avoid the headache having to make events with clunky events. Make them with notes!  
+  > <Image src={venuegen} alt="VenueGen showing options to apply or pull lighting and camera from VENUE. There's also bottones to generate and generate and overwrite." />
+* F10 - <a href="https://github.com/smcconne/Song-Progress-Tracker" target="_blank" rel="noopener noreferrer">[VenuePreview]</a>: Get a very good estimate of what your venue looks like. Check how your post-procs, lighting, and camera choices are. Also shows Guitar/Bass, Guitar/Keys, and Bass/Keys variants.  
+  > <Image src={venuepreview} alt="Venue Preview showing the current camera, current post-proc effect, and lighting." />
 * K - Makes a count off. You have to click on bar 2 before pressing this.
   * Reminder to tempo map first then chart because the count in will shift everything right!
 * Q - Sets tempo by bar depending on where your cursor is.
 * SHIFT+Q - Move closest grid line to mouse cursor while holding.
-* SHIFT+L - Import lyrics for selected notes from file.
-* ALT+SHIFT+S - Splits a long note along the current grid. Great for quickly creating things like 16th note patterns.
-* NUMPAD 9 - Set note lengths to grid size.
+* [MIDI Editor] SHIFT+L - Import lyrics for selected notes from file.
+* [MIDI Editor] CTRL+SHIFT+Mousewheel - Adjust note velocities. Extremely handy for Pro Guitar/Bass.
+* [MIDI Editor] ALT+SHIFT+S - Splits a long note along the current grid. Great for quickly creating things like 16th note patterns.
+* [MIDI Editor] NUMPAD 9 - Set note lengths to grid size. Helpful if you want to adjust lots of notes to a specific size, like shrinking down to 32nd notes.
 
-### Other essential stuff
-It's worth checking this stuff out!
-* <a href="http://docs.c3universe.com/rbndocs/index.php?title=Authoring" target="_blank" rel="noopener noreferrer">[RBN/C3 charting guide]</a> - The essential guide on charting for Rock Band. Written by Harmonix and with parts added by the C3 team.
-  * <a href="https://web.archive.org/web/20250417062932/http://docs.c3universe.com/rbndocs/index.php?title=Authoring" target="_blank" rel="noopener noreferrer">[Wayback version in case the main link is down]</a>  
+## Other included plugins
+These are some other plugins included in the template:
+* <a href="https://github.com/noahbaxter/chartchotic" target="_blank" rel="noopener noreferrer">[ChartChotic]</a> - An open source and modernized replacement for RBN Preview. This one is cross-platform so Linux (and Mac) users can finally see what they're charting.  
+There's a lot of other cool features so make sure you explore this one! 
+  > <Image src={chartchotic} alt="ChartChotic showing a drum track." />
+* <a href="https://github.com/Deevun155/ProKeysPreview" target="_blank" rel="noopener noreferrer">[Pro Keys Preview]</a> - A plugin to help see your Pro Keys charts. Very helpful to spot range limitations and shifts!  
+  > <Image src={prokeyspreview} alt="Venue Preview showing the current camera, current post-proc effect, and lighting." />
+
+## Additional downloads
+It's worth checking this stuff out and downloading it!
 * <a href="https://nemosnautilus.com/magma/" target="_blank" rel="noopener noreferrer">[MAGMA]</a> - A tool to compile your custom so it can go in the game. It’s still in use and has been improved over the years.  
 * <a href="https://nemosnautilus.com/nautilus/" target="_blank" rel="noopener noreferrer">[Nautilus (formerly known as C3 CON Tools)]</a> - The Swiss army knife of Rock Band stuff. Lots of great and specific tools for customs.  
 * <a href="https://github.com/mtolly/onyx/releases" target="_blank" rel="noopener noreferrer">[Onyx]</a> - A must have tool if you’re testing on RPCS3 as it can export into a modern PS3 format.
-* <a href="https://github.com/Anjok07/ultimatevocalremovergui/releases/download/v5.6/UVR_1_15_25_22_30_BETA_full.exe" target="_blank" rel="noopener noreferrer">[Ultimate Vocal Remover GUI]</a> - Contrary to what the name is, this does a lot more than just remove vocals. This is AI stem separation software that can greatly help in separating a song into separate elements to help with charting. The version linked is a beta version that includes the ability to import Roformer models. Here are the suggested models:
+* <a href="https://rentry.co/UVR-SW-Instructions" target="_blank" rel="noopener noreferrer">[Ultimate Vocal Remover GUI]</a> - Contrary to what the name is, this does a lot more than just remove vocals. This is AI stem separation software that can greatly help in separating a song into separate elements to help with charting. The version linked is a beta version that includes the ability to import Roformer models. Here are the suggested models:
   * Demucs:
     * htdemucs_ft - Separates into four instruments.
     * htdemucs_6s - Gives you six instruments instead of the usual four.
   * MDX-NET
-    * <a href="https://rentry.co/UVR-SW-Instructions" target="_blank" rel="noopener noreferrer">[BS Roformer SW]</a> - Like htdemucs_6s but with monumentally superior quality. Requires a beefy graphics card!
+    * <a href="https://huggingface.co/jarredou/BS-ROFO-SW-Fixed/tree/main" target="_blank" rel="noopener noreferrer">[BS Roformer SW]</a> - Like htdemucs_6s but with monumentally superior quality. Requires a beefy graphics card!
     * UVR-MDX-NET INST HQ 3 or 5 - Essential as it usually gives better vocal isolation than Demucs.
     * <a href="https://github.com/jarredou/models/releases/tag/aufr33-jarredou_MDX23C_DrumSep_model_v0.1" target="_blank" rel="noopener noreferrer">[Drumsep]</a> - Essential as it separates a stereo drum track into various elements. Helps a ton with drum charting.
 * <a href="https://mvsep.com/en" target="_blank" rel="noopener noreferrer">[Mvsep]</a> - Like UVR but it runs on a server. You are restricted to MP3 quality and there is a queue. You can pay to avoid this.
-* <a href="https://therogerland.tumblr.com/proguide" target="_blank" rel="noopener noreferrer">[Pro Guitar Guide]</a> - You're probably never gonna touch Pro Guitar/Bass, but for the masochists, this is the only good guide out there.

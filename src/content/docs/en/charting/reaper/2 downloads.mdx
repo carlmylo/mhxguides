@@ -1,37 +1,171 @@
 ---
 title: "REAPER: Downloads"
 slug: "en/charting/reaper/downloads"
-description: "How to set up REAPER to chart for Rock Band 3."
+description: "What to download to set up REAPER for charting."
 tableOfContents: false
 sidebar:
   order: 2
   label: Downloads
 ---
-import webreaper from '@assets/charting/reaper/webreaper-win.png';
-import websws from '@assets/charting/reaper/websws-win.png';
+import webreaperwin from '@assets/charting/reaper/webreaper-win.png';
+import webreapernix from '@assets/charting/reaper/webreaper-nix.png';
+import webswswin from '@assets/charting/reaper/websws-win.png';
+import webswsnix from '@assets/charting/reaper/websws-nix.png';
 import webpython from '@assets/charting/reaper/webpython-win.png';
+import pyinstall from '@assets/rb3/general/discordrp/pyinstall.png';
+import webreapackgnu from '@assets/charting/reaper/webreapack-gnu.png';
 import explorerdrag from '@assets/charting/reaper/explorerdrag-win.gif';
+import archreaperdl from '@assets/charting/reaper/arch-reaperdl.png';
+import archtermchartfiles from '@assets/charting/reaper/arch-termchartfiles.png';
+import archsymlink from '@assets/charting/reaper/arch-symlink.png';
+import gnureaperdl from '@assets/charting/reaper/gnu-reaperdl.png';
+import gnureaperins from '@assets/charting/reaper/gnu-reaperins.png';
+import gnutermreaper1 from '@assets/charting/reaper/gnu-termreaper1.png';
+import gnutermreaper2 from '@assets/charting/reaper/gnu-termreaper2.png';
+import gnureaperopen from '@assets/charting/reaper/gnu-reaperopen.png';
+import settingsaudioalert from '@assets/charting/reaper/settingsaudioalertno.png';
+import errordevicegnu from '@assets/charting/reaper/errordeviceno-gnu.png';
+import gnureaperpath from '@assets/charting/reaper/gnu-reaperpath.png';
+import gnureapercls from '@assets/charting/reaper/gnu-reapercls.png';
+import gnuswsdl from '@assets/charting/reaper/gnu-swsdl.png';
+import gnuswsdnd from '@assets/charting/reaper/gnu-swsdnd.gif';
+import gnureapackdnd from '@assets/charting/reaper/gnu-reapackdnd.gif';
+import gnutermchartfiles from '@assets/charting/reaper/gnu-termchartfiles.png';
 import { Image } from 'astro:assets';
 import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 ## Installing REAPER
+<Tabs>
+  <TabItem label="Windows">
 <Steps>
 1. <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer">[Download and install the latest 64-bit version of REAPER.]</a>.
     * **Please DO NOT enable the `Portable install` option when installing!**  
-    > <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer"><Image src={webreaper} alt="REAPER's download page cropped to show the download button for Windows. The cursor is over the green Download button in the Windows section." /></a>
+    > <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer"><Image src={webreaperwin} alt="REAPER's download page cropped to show the download button for Windows. The cursor is over the green Download button in the Windows section." /></a>
 
 2. <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer">[Download and install the latest 64-bit version of SWS / S&M Extension.]</a>.
     * Please **keep `Python ReaScript support` enabled when installing!**  
-    > <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer"><Image src={websws} alt="SWS/S&M Extension's download page, cropped to show the download button for Windows. The cursor is over the 'Download x64'  button in the Windows section." /></a>
+    > <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer"><Image src={webswswin} alt="SWS/S&M Extension's download page, cropped to show the download button for Windows. The cursor is over the 'Download x64'  button in the Windows section." /></a>
 
-3. <a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer">[Download and install the latest version of Python 3 if you don't have it already.]</a>.
+3. <a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer">[Download the latest version of Python 3 if you don't have it already.]</a>.
     * **Do NOT download Python install manager!**
     * **Python 2 is NOT the same and will not work**.
     > <a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer"><Image src={webpython} alt="Python's download page cropped to show a cursor over 'get the standalone installer for Python 3.14.2'." /></a>
-4. <a href="https://www.dropbox.com/scl/fi/d095opr4dforkodoyakkv/REAPER-Files-WIN.zip?rlkey=in0qshm2g4ng64w3angz8ehfq&st=vyiy4h7y&dl=1" target="_blank" rel="noopener noreferrer">[Click here to download the REAPER Files `.zip` archive.]</a>.
+
+4. Once it finishes downloading, open the installer.  
+In the installer:  
+    * Activate `Add python.exe to PATH`
+    * Click `Install now`  
+    > <Image src={pyinstall} alt="Python's installer with 'Add python.exe to PATH' and 'Install now' are highlighted in tan with a dotted black outline." />
+
+5. <a href="https://www.dropbox.com/scl/fi/d095opr4dforkodoyakkv/REAPER-Files-WIN.zip?rlkey=in0qshm2g4ng64w3angz8ehfq&st=vyiy4h7y&dl=1" target="_blank" rel="noopener noreferrer">[Click here to download the REAPER charting files `.zip` archive.]</a>.
     * a. Extract the `.zip` archive somewhere convenient.
     * b. Drag the `Common` folder into `DRAG 'Common' HERE` shortcut.
-    * c. Drag `REAPER` into the `DRAG 'REAPER' HERE` shortcut.  
+    * c. Drag `REAPER` into the `DRAG 'REAPER' HERE` shortcut.
     * d. Replace any files if you're asked.
     > <a href="https://www.dropbox.com/scl/fi/d095opr4dforkodoyakkv/REAPER-Files-WIN.zip?rlkey=in0qshm2g4ng64w3angz8ehfq&st=vyiy4h7y&dl=1" target="_blank" rel="noopener noreferrer"><Image src={explorerdrag} alt="Folders being dragged into shortcuts to other folders." /></a>
 </Steps>
+</TabItem>
+<TabItem label="Linux">
+<Tabs>
+<TabItem label="Arch">
+<Aside type="caution">This part is designed for x86-64/AMD64 64-bit Arch installs **and not for ARM installs**!</Aside>
+Installing REAPER on Arch is extremely easy and takes three commands! Arch users can simply run the following commands in a terminal:
+<Steps>
+1. Install REAPER along with SWS and ReaPack. TK and Unzip will be download and will be installed if they're missing missing or updated if they're outdated.
+    ```bash
+    sudo pacman -S reaper sws reapack tk unzip
+    ```
+    > <Image src={archreaperdl} alt="A terminal downloading REAPER along with some other stuff. It asks the user if they're sure if they want to proceed." />
+2. Create a "symlink" (symbolic link) so REAPER can pick up SWS.
+    ```bash
+    ln -s /usr/lib/sws/reaper_sws-x86_64.so ~/.config/REAPER/UserPlugins/
+    ln -s /usr/lib/sws/sws_python64.py ~/.config/REAPER/Scripts/
+    ```
+    > <Image src={archsymlink} alt="A terminal creating a symbolic link from the 'usr/lib' folder to the '~/.config' folder." />
+3. After that finishes, download and install the REAPER charting files.
+    Run the following command in a terminal:  
+    ```bash
+    curl https://guides.milohax.org/downloads/chart/download-reaper-files.sh | bash
+    ```
+    This will download and place all of the files you'll need to chart in REAPER.
+    > <Image src={archtermchartfiles} alt="A terminal downloading the REAPER charting files via curl." />
+</Steps>
+</TabItem>
+<TabItem label="Other Distros">
+<Aside type="caution">This part is designed for x86-64/AMD64 64-bit Linux installs **and not for ARM installs**!</Aside>
+<Aside>This guide assumes you have the following installed:  
+`bzip2`  
+`curl`  
+`python3`  
+`python3-tk`   
+Check with your Distro to see how to install these packages if you're missing them before advancing.</Aside>
+<Steps>
+1. <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer">[Download the latest 64-bit version of REAPER]</a>.
+    > <a href="https://www.reaper.fm/download.php" target="_blank" rel="noopener noreferrer"><Image src={webreapernix} alt="REAPER's download page cropped to show the download button for Linux." /></a>
+
+2. <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer">[Download and install the latest 64-bit version of SWS / S&M Extension for Linux]</a>.
+    > <a href="https://www.sws-extension.org" target="_blank" rel="noopener noreferrer"><Image src={webswsnix} alt="SWS/S&M Extension's download page, cropped to show the download button for Linux. The cursor is over the 'Download x64'  button in the Linux section." /></a>
+
+3. <a href="https://reapack.com/" target="_blank" rel="noopener noreferrer">[Download the latest 64-bit version of ReaPack for Linux]</a>.
+    > <a href="https://reapack.com/" target="_blank" rel="noopener noreferrer"><Image src={webreapackgnu} alt="ReaPack's download page, cropped to show the download section for Linux. The cursor is over the 'x86 64-bit' link in the Linux section." /></a> 
+
+4. Go to the REAPER archive you download and extract it, then go into the extracted folder.
+    > <Image src={gnureaperdl} alt="REAPER's extracted download folder with a cursor hovering over it." />
+
+5. Run the `install-reaper.sh` script.
+    > <Image src={gnureaperins} alt="A cursor hovers over the 'install-reaper.sh' script." />
+
+6. On the first part of the script, press `I` to install REAPER.
+    > <Image src={gnutermreaper1} alt="A terminal asking the user if they want to run or install REAPER, view its README, or add desktop integration." />
+
+7. In the next part, you will be asked if you want to install REAPER to the system or the home folder.  
+    **You should install it to the home folder with `2`!**  
+
+    After that, you'll be asked if you want to add desktop integration.  
+    This is suggested so you can open `.RPP` (REAPER Project files).  
+    Select `2` to enable this.
+
+    You'll finally be asked to proceed with the installation.  
+    Press `Y` and let it finish to install REAPER.
+    > <Image src={gnutermreaper2} alt="A continuation of the REAPER install script. It asks the user all of the bits brought up above." />
+
+8. Open REAPER after installing it.
+    > <Image src={gnureaperopen} alt="REAPER in the search results, ready to open. The cursor is over the program icon." />
+    
+    If REAPER asks you to select an audio device driver, select `No` for now.
+    > <Image src={settingsaudioalert} alt="REAPER warning the user that they haven't selected an audio device." />
+
+    If REAPER alerts you that it cannot open up any audio hardware, ignore it for now.
+    > <Image src={errordevicegnu} alt="REAPER warning the user that there was an error opening the audio hardware." />
+
+9. Go to `Options` > `Show REAPER resource path in explorer/finder...`
+    > <Image src={gnureaperpath} alt="REAPER in the search results, ready to open. The cursor is over the program icon." />
+
+10. After the resources folder opens, close out REAPER.
+    > <Image src={gnureapercls} alt="A cursor over REAPER's exit button." />
+
+11. While leaving the resource folder open, open another file browser window and go to the SWS archive you downloaded and extract it.  
+Go into the folder afterwards.
+    > <Image src={gnuswsdl} alt="SWS's extracted download folder with a cursor hovering over it." />
+
+12. Drag the folders within the SWS folder into REAPER's resource folder.
+    > <Image src={gnuswsdnd} alt="Folders from SWS being dragged into REAPER's resource folder." />
+
+13. Leave the REAPER resource folder open and use the other file browser window to navigate to ReaPack's downloaded file.  
+Drag that file into REAPER resources' `UserPlugins` folder.
+    > <Image src={gnureapackdnd} alt="The ReaPack extension file being dragged into REAPER's 'UserPlugins' folder." />
+
+14. After all of that, download and install the REAPER charting files.
+    Run the following command in a terminal:  
+    ```bash
+    curl https://guides.milohax.org/downloads/chart/download-reaper-files.sh | bash
+    ```
+    This will download and place all of the files you'll need to chart in REAPER.
+    > <Image src={gnutermchartfiles} alt="A terminal downloading all of the files to chart with REAPER." />
+</Steps>
+</TabItem>
+</Tabs>
+</TabItem>
+</Tabs>
