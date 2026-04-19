@@ -1,0 +1,51 @@
+---
+title: "REAPER: Problemas y soluciones"
+slug: "es/charting/reaper/troubleshooting"
+description: "Cómo configurar REAPER para chartear customs de Rock Band 3."
+tableOfContents: false
+sidebar:
+  order: 6
+  label: Problemas y soluciones
+---
+import errorpluginwin from '@assets/charting/reaper/errorplugin-win.png';
+import errordevicewin from '@assets/charting/reaper/errordevice-win.png';
+import errorjackarch from '@assets/charting/reaper/errorjack-arch.png';
+import archpwjack from '@assets/charting/reaper/arch-pwjackes.png';
+import settingsaudioarch from '@assets/charting/reaper/settingsaudioes-arch.png';
+import errordevicegnu from '@assets/charting/reaper/errordevicees-gnu.png';
+import { Image } from 'astro:assets';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs>
+  <TabItem label="Windows">
+* ¡REAPER me da `Error al abrir dispositivos` cuando cambio a WASAPI!
+  > <Image src={errordevicewin} alt="REAPER mostrando un error que dice 'There was an error opening the audio hardware. WASAPI Error: could not find input device'." />
+  * `No se pudo encontrar entrada`: Es muy probable que tienes un micrófono conectado o el formato no coincide con la de tu salida (i.e. altavoces están a 48,000 Hz y el micrófono esta a 44,100 Hz).  
+  Si es la primera, cambia `Canales de entrada` a `0` en la sección de `Dispositivos` en las Preferencias.  
+  Si es la segunda, cambia el formato para que coinciden juntos.
+* ¡No me carga el plugin para visualizar (RBN Preview)!
+  > <Image src={errorpluginwin} alt="REAPER mostrando un error con RBN Preview." />
+  * No deberias de seguir usando este plugin, pero si quieres ser terco, te faltan archivos de Microsoft Visual C++ Redistributable Runtimes.  
+  <a href="https://kutt.it/vcpp" target="_blank" rel="noopener noreferrer">[Haz click aquí para descargarlos]</a>.  
+</TabItem>
+<TabItem label="Arch">
+* I get "`JACK: error creating client`" when swapping to JACK!
+  > <Image src={errorjackarch} alt="REAPER showing an error that says 'There was an error opening the audio hardware. WASAPI Error: could not find input device'." />
+  #### Solution A:
+  * You have `jack2` installed and need to replace it with `pipewire-jack`.
+    * Install `pipewire-jack` by running this command in a terminal.
+        ```bash
+        sudo pacman -S pipewire-jack
+        ```
+        > <Image src={archpwjack} alt="Una terminal descargando pipewire-jack de pacman." />
+  #### Solution B:
+  * Change to a different audio system, like `PulseAudio` or `ALSA`.
+    > <Image src={settingsaudioarch} alt="REAPER's Preferences showing the Device section." />
+</TabItem>
+<TabItem label="Debian (including Ubuntu)">
+* I get "`Error opening devices`" when swapping to JACK!
+  > <Image src={errordevicegnu} alt="REAPER showing an error that says 'Three was an error opening the audio audio hardware'." />
+  * Change to a different audio system, like `PulseAudio` or `ALSA`.
+    > <Image src={settingsaudioarch} alt="REAPER's Preferences showing the Device section." />
+</TabItem>
+</Tabs>
